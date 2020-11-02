@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
 
 @Component({
   selector: 'app-clone-wars-chronological',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CloneWarsChronologicalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService) { }
 
   ngOnInit(): void {
+	  console.log(this.cloneWarsEpisodesService.getCloneWarsEpisodes());
   }
 
 }

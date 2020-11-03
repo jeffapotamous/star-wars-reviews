@@ -20,3 +20,12 @@ export interface Book {
 	googlePlayLink?: string;
 	appleLink?: string;
 }
+
+export interface TableColumn {
+	header: string;
+	field: string;
+	sort: boolean;
+	style?: any;
+	classCompare?: string;
+	type?: string;
+}

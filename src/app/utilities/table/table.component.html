@@ -1,0 +1,24 @@
+<p-table [columns]="columns" [value]="tableData">
+  <ng-template pTemplate="header" let-columns>
+    <th *ngFor="let col of columns" [ngStyle]="col.style" [style.width]="col.style?.width"
+      [pSortableColumnDisabled]="!col.sort" [pSortableColumn]="col.field" pResizableColumn>
+      {{col.header}}
+      <p-sortIcon [field]="col.field">
+      </p-sortIcon>
+    </th>
+  </ng-template>
+  <ng-template pTemplate="body" let-data let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns" [style.text-align]="col.style?.align"
+        class="{{col.classCompare | tableDataClass:data[col.field]}}">
+        <a *ngIf="col.type === 'linkIcon'; else defaultData" href="{{data[col.field].link}}" target="_blank">
+          <img class="{{data[col.field]?.class}}" src="{{data[col.field].image}}">
+        </a>
+
+        <ng-template #defaultData>
+          {{data[col.field]}}
+        </ng-template>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewClass } from '../interfaces/enums';
-import { CloneWarsEpisode } from '../interfaces/interfaces';
+import { CloneWarsEpisode, TableColumn } from '../interfaces/interfaces';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
 
 @Component({
@@ -10,52 +10,30 @@ import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.servic
 })
 export class CloneWarsReviewComponent implements OnInit {
 
-  public bestCloneWarsEpisodes: CloneWarsEpisode[];
-  public goodCloneWarsEpisodes: CloneWarsEpisode[];
-  public alrightCloneWarsEpisodes: CloneWarsEpisode[];
-  public badCloneWarsEpisodes: CloneWarsEpisode[];
+  /* ----- Table ----- */
+  public tableColumns: TableColumn[];
+  public tableData: any[];
 
   constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService) {
-    this.bestCloneWarsEpisodes = [];
-    this.goodCloneWarsEpisodes = [];
-    this.alrightCloneWarsEpisodes = [];
-    this.badCloneWarsEpisodes = [];
+    this.tableColumns = [
+      { header: 'Season', field: 'season', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'season' },
+      { header: 'Episode', field: 'episode', sort: false, style: { width: '100px', align: 'right' } },
+      { header: 'Name', field: 'name', sort: true },
+      { header: 'Rank', field: 'rankOrder', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'rank' },
+      { header: 'Release Order', field: 'releaseOrder', sort: true, style: { width: '150px', align: 'right' } },
+      { header: 'Chronological Order', field: 'chronologicalOrder', sort: true, style: { width: '200px', align: 'right' } },
+      { header: 'Disney+', field: 'disneyPlus', sort: false, style: { width: '100px', align: 'center' }, type: 'linkIcon' },
+    ];
+    this.tableData = [];
   }
 
   ngOnInit(): void {
-    const lastBestEpisode: number = 88;
-    const lastGoodEpisode: number = 49;
-    const lastAlrightEpisode: number = 128;
+    this.cloneWarsEpisodesService.getCloneWarsEpisodes().forEach((episode: CloneWarsEpisode, index: number) => {
+      const episodeData: any = episode;
+      episodeData.disneyPlus = { image: 'assets/images/icon.png', link: episodeData.link, class: 'disney-logo' };
+      episodeData.rankOrder = index + 1;
 
-    let code: ReviewClass = ReviewClass.BEST;
-
-    this.cloneWarsEpisodesService.getCloneWarsEpisodes().forEach((episode: CloneWarsEpisode) => {
-      switch (code) {
-        case ReviewClass.BEST:
-          this.bestCloneWarsEpisodes.push(episode);
-          break;
-        case ReviewClass.GOOD:
-          this.goodCloneWarsEpisodes.push(episode);
-          break;
-        case ReviewClass.ALRIGHT:
-          this.alrightCloneWarsEpisodes.push(episode);
-          break;
-        case ReviewClass.BAD:
-          this.badCloneWarsEpisodes.push(episode);
-          break;
-      }
-
-      switch (episode.releaseOrder) {
-        case lastBestEpisode:
-          code = ReviewClass.GOOD;
-          break;
-        case lastGoodEpisode:
-          code = ReviewClass.ALRIGHT;
-          break;
-        case lastAlrightEpisode:
-          code = ReviewClass.BAD;
-          break;
-      }
+      this.tableData.push(episodeData);
     });
   }
 

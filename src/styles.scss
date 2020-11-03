@@ -71,6 +71,16 @@ a {
   color: $dark-gray;
 }
 
+.link {
+  cursor: pointer;
+}
+
+.icon-image {
+  max-height: 35px;
+  max-width: 35px;
+  object-fit: cover;
+}
+
 /* ----- CW Episodes ----- */
 .disney-plus-link {
   margin-left: 5px;

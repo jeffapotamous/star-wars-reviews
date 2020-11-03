@@ -1,17 +1,40 @@
 <div class="grid">
-  <div class="main-pgae-section" id="landing-section">
-    <h2>Jeffapotamous' Star Wars Reviews</h2>
+  <div #home class="main-pgae-section">
+    <h1>Jeffapotamous' Star Wars Reviews</h1>
   </div>
 
-  <div class="main-pgae-section" id="books-section">
+  <div #books class="main-pgae-section" id="books-section">
     <app-books></app-books>
   </div>
 
-  <div class="main-pgae-section" id="clone-wars-review-section">
+  <div #cloneWars class="main-pgae-section" id="clone-wars-review-section">
     <app-clone-wars-review></app-clone-wars-review>
   </div>
 
-  <div class="main-pgae-section" id="clone-wars-chronological-section">
+  <div #chronological class="main-pgae-section" id="clone-wars-chronological-section">
     <app-clone-wars-chronological></app-clone-wars-chronological>
+  </div>
+</div>
+
+<div class="grid" id="navigation-panel">
+
+  <img class="link icon-image" src="assets/images/icons/chevron-up.png" (click)="scroll(home)">
+  <div class="link navigation-item" (click)="scroll(home)">
+    Back to Top
+  </div>
+
+  <img class="link icon-image" src="assets/images/icons/book.png" (click)="scroll(books)">
+  <div class="link navigation-item" (click)="scroll(books)">
+    Books
+  </div>
+
+  <img class="link icon-image" src="assets/images/clone wars.png" (click)="scroll(cloneWars)">
+  <div class="link navigation-item" (click)="scroll(cloneWars)">
+    Clone Wars
+  </div>
+
+  <img class="link icon-image" src="assets/images/icons/clock.svg" (click)="scroll(chronological)">
+  <div class="link navigation-item" (click)="scroll(chronological)">
+    Chronological CW
   </div>
 </div>

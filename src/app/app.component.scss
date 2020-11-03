@@ -8,10 +8,6 @@
   display: grid;
 }
 
-#landing-section {
-  // background-color: $dark-gray;
-}
-
 #books-section {
   background-color: $light-gray;
 }
@@ -23,4 +19,33 @@
 
 #clone-wars-chronological-section {
   background-color: $dark-gray;
+}
+
+#navigation-panel {
+  position: fixed;
+  grid-template-rows: 35px 35px 35px 35px;
+  grid-template-columns: 35px 1fr;
+  top: 26px;
+  width: 244px;
+  right: -203px;
+  transition: 0.5s ease-out;
+  font-size: 1.5em;
+
+  &:hover {
+    right: 0;
+  }
+}
+
+.navigation-item {
+  text-align: left;
+  padding: 4px 10px;
+  text-shadow: 1px 1px 1px black;
+
+  background: linear-gradient(to right, #00000000 50%, #ec3f09 50%) left;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-position: right;
+  }
 }

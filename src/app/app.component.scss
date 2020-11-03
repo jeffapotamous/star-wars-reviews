@@ -23,7 +23,17 @@
 
 #rots-extended-section {
   grid-template-columns: 1fr 560px;
-  padding: 45px 30px;
+  padding: 20px 30px;
+}
+
+#footer-section {
+  background-color: black;
+  height: 21px;
+  padding: 3px 11px;
+}
+
+#gh-icon {
+  height: 21px;
 }
 
 #navigation-panel {

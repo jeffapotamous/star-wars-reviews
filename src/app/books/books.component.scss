@@ -1,16 +1,13 @@
 @import "../../styles.scss";
 
-#review-books-container {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 .book-container {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   background-color: $dark-gray;
   border-radius: 3px;
-  margin-bottom: 31px;
+  margin: 0 15px 25px 0;
   padding: 5px 14px;
+  width: 300px;
 }
 
 .rank-index {

@@ -2,6 +2,7 @@
 
 #chronological-episodes-grid {
   grid-template-columns: 221px 506px;
+  
 }
 
 .separator {
@@ -11,6 +12,7 @@
 .episode-item {
   border-right: 1px solid $black;
   border-left: 1px solid $black;
+  color: $darkest-gray;
 }
 
 #chronological-episodes-list {

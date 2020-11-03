@@ -1,10 +1,16 @@
+$black: #000000;
+$white: #ffffff;
+$darkest-gray: #121212;
+$dark-gray: #1f1f1f;
+$gray: #2b2b2b;
+$light-gray: #424242;
+$light-white: #c2c2c2;
+
 $blue: #058ba2;
 $green: #388104;
 $purple: purple;
 $yellow: #c9b40b;
 $red: #b72f2f;
-$black: #000000;
-$white: #ffffff;
 $orange: orange;
 
 $theme-1: #519872;
@@ -16,6 +22,8 @@ $theme-5: #816e94;
 /* ----- Globals ----- */
 body {
   margin: 0;
+  background-color: $darkest-gray;
+  color: $light-white;
 }
 
 a {

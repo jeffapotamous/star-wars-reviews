@@ -10,6 +10,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.ranked-episode-item {
+  color: $darkest-gray;
+}
+
 #great-container {
   background-color: $green;
 }

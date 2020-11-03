@@ -17,4 +17,6 @@ export interface Book {
 	cons: string;
 	fileName: string;
 	amazonLink: string;
+	googlePlayLink?: string;
+	appleLink?: string;
 }

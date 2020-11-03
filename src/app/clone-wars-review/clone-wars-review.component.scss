@@ -1,14 +1,20 @@
 @import "../../styles.scss";
 
-#best-of-episodes-grid {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+#clone-wars-container {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 33px;
 }
 
-.ranked-episode-item {
-  color: $darkest-gray;
+#clone-wars-text-container {
+  grid-template-columns: 1fr 103px;
+  padding: 5px 15px;
 }
 
-.ranked-index-number {
-  font-size: 0.6em;
-  font-style: italic;
+#clone-wars-description {
+  padding: 5px 15px;
+}
+
+#clone-wars-key {
+  width: 103px;
+  text-align: center;
 }

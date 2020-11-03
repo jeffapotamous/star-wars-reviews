@@ -1,0 +1,37 @@
+<div>
+  <h3>Star Wars: The Clone Wars Chronological Order</h3>
+
+  <div class="grid" id="chronological-episodes-grid">
+    <div id="chronological-episodes-key">
+      <h4>Seasons</h4>
+      <p class="season-key-label season-1">Season 1</p>
+      <p class="season-key-label season-2">Season 2</p>
+      <p class="season-key-label season-3">Season 3</p>
+      <p class="season-key-label season-4">Season 4</p>
+      <p class="season-key-label season-5">Season 5</p>
+      <p class="season-key-label season-6">Season 6</p>
+      <p class="season-key-label season-7">Season 7</p>
+    </div>
+
+    <div id="chronological-episodes-list">
+      <div *ngFor="let episode of chronologicalEpisodes; let index = index"
+        class="episode-item season-{{episode.season}}"
+        [class.separator]="chronologicalEpisodes[index + 1] && episode.releaseOrder !== (chronologicalEpisodes[index + 1].releaseOrder - 1)">
+        <span *ngIf="episode.season" class="inline-block season-label">
+          Season: {{episode.season}}
+        </span>
+
+        <span *ngIf="episode.episode" class="inline-block episode-label">
+          Episode: {{episode.episode}}
+        </span>
+
+        <span class="inline-block name-label">
+          {{episode.name}}
+          <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+            <img class="disney-logo" src="assets/images/icon.png">
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

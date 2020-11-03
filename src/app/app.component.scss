@@ -1,0 +1,25 @@
+@import "../styles.scss";
+
+.main-pgae-section {
+  padding: 50px;
+}
+
+.grid {
+  display: grid;
+}
+
+#landing-section {
+  background-color: $onyx;
+}
+
+#books-section {
+  background-color: $deep-taupe;
+}
+
+#clone-wars-review-section {
+  background-color: $carrot-orange;
+}
+
+#clone-wars-chronological-section {
+  background-color: $russian-green;
+}

@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+
+#chronological-episodes-grid {
+  grid-template-columns: 221px 506px;
+}
+
+.separator {
+  border-bottom: 4px solid $black;
+}
+
+.episode-item {
+  border-right: 1px solid $black;
+  border-left: 1px solid $black;
+}
+
+#chronological-episodes-list {
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+#chronological-episodes-key {
+  text-align: center;
+}
+
+.season-key-label {
+  padding: 3px 5px;
+  width: 90px;
+  margin: 10px auto;
+}

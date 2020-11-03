@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewClass } from '../interfaces/enums';
 import { CloneWarsEpisode } from '../interfaces/interfaces';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
-
-export enum EpisodeClass {
-  BEST,
-  GOOD,
-  ALRIGHT,
-  BAD
-}
 
 @Component({
   selector: 'app-clone-wars-review',
@@ -33,38 +27,36 @@ export class CloneWarsReviewComponent implements OnInit {
     const lastGoodEpisode: number = 49;
     const lastAlrightEpisode: number = 128;
 
-    let code: EpisodeClass = EpisodeClass.BEST;
+    let code: ReviewClass = ReviewClass.BEST;
 
-    console.log(this.cloneWarsEpisodesService.getCloneWarsEpisodes())
     this.cloneWarsEpisodesService.getCloneWarsEpisodes().forEach((episode: CloneWarsEpisode) => {
       switch (code) {
-        case EpisodeClass.BEST:
+        case ReviewClass.BEST:
           this.bestCloneWarsEpisodes.push(episode);
           break;
-        case EpisodeClass.GOOD:
+        case ReviewClass.GOOD:
           this.goodCloneWarsEpisodes.push(episode);
           break;
-        case EpisodeClass.ALRIGHT:
+        case ReviewClass.ALRIGHT:
           this.alrightCloneWarsEpisodes.push(episode);
           break;
-        case EpisodeClass.BAD:
+        case ReviewClass.BAD:
           this.badCloneWarsEpisodes.push(episode);
           break;
       }
 
       switch (episode.releaseOrder) {
         case lastBestEpisode:
-          code = EpisodeClass.GOOD;
+          code = ReviewClass.GOOD;
           break;
         case lastGoodEpisode:
-          code = EpisodeClass.ALRIGHT;
+          code = ReviewClass.ALRIGHT;
           break;
         case lastAlrightEpisode:
-          code = EpisodeClass.BAD;
+          code = ReviewClass.BAD;
           break;
       }
     });
-    console.log(this.bestCloneWarsEpisodes);
   }
 
 }

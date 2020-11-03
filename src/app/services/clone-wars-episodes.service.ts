@@ -7,7 +7,7 @@ import { UtilsService } from './utils.service';
 })
 export class CloneWarsEpisodesService {
 
-  listOfCloneWars: CloneWarsEpisode[];
+  private listOfCloneWars: CloneWarsEpisode[];
 
   constructor(private utilsService: UtilsService) {
     this.listOfCloneWars = [
@@ -16,7 +16,7 @@ export class CloneWarsEpisodesService {
       { season: 7, episode: 11, releaseOrder: 133, chronologicalOrder: 133, name: 'Shattered', link: 'https://www.disneyplus.com/video/cfcd7267-d3d1-4e98-92d6-3129b4c8d686' },
       { season: 4, episode: 8, releaseOrder: 75, chronologicalOrder: 75, name: 'The General', link: 'https://www.disneyplus.com/video/61e6b80b-ae44-431d-ae37-3ff46db6fdf6' },
       { season: 4, episode: 7, releaseOrder: 74, chronologicalOrder: 74, name: 'Darkness on Umbara', link: 'https://www.disneyplus.com/video/f9bfac62-4bb9-443b-905c-db5d978df3f2' },
-      { season: 7, episode: 12, releaseOrder: 134, chronologicalOrder: 134, name: 'Victory and Death', link: '	https://www.disneyplus.com/video/f21bd5ab-d24d-4a4a-b09c-d09d4361148b' },
+      { season: 7, episode: 12, releaseOrder: 134, chronologicalOrder: 134, name: 'Victory and Death', link: 'https://www.disneyplus.com/video/f21bd5ab-d24d-4a4a-b09c-d09d4361148b' },
       { season: 7, episode: 10, releaseOrder: 132, chronologicalOrder: 132, name: 'The Phantom Apprentice', link: 'https://www.disneyplus.com/video/24dd0033-1f7d-492e-9114-63a684fa4f78' },
       { season: 1, episode: 5, releaseOrder: 6, chronologicalOrder: 10, name: 'Rookies', link: 'https://www.disneyplus.com/video/598d1e7b-f39e-4527-9487-b5e891f5eefa' },
       { season: 3, episode: 1, releaseOrder: 46, chronologicalOrder: 4, name: 'Clone Cadets', link: 'https://www.disneyplus.com/video/7851718f-2530-47e2-bf32-a8b498b3efa9' },
@@ -156,12 +156,12 @@ export class CloneWarsEpisodesService {
   }
 
   public getCloneWarsEpisodesChronological(): CloneWarsEpisode[] {
-    const a = this.utilsService.deepCopy(this.listOfCloneWars);
-    return a.sort((a: CloneWarsEpisode, b: CloneWarsEpisode) => { return a.chronologicalOrder - b.chronologicalOrder });
+    const episodesCopy = this.utilsService.deepCopy(this.listOfCloneWars);
+    return episodesCopy.sort((a: CloneWarsEpisode, b: CloneWarsEpisode) => a.chronologicalOrder - b.chronologicalOrder);
   }
 
   public getCloneWarsEpisodesRelease(): CloneWarsEpisode[] {
-    const a = this.utilsService.deepCopy(this.listOfCloneWars);
-    return a.sort((a: CloneWarsEpisode, b: CloneWarsEpisode) => { return a.releaseOrder - b.releaseOrder });
+    const episodesCopy = this.utilsService.deepCopy(this.listOfCloneWars);
+    return episodesCopy.sort((a: CloneWarsEpisode, b: CloneWarsEpisode) => a.releaseOrder - b.releaseOrder);
   }
 }

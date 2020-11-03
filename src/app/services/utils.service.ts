@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class UtilsService {
       copy = new Date();
       copy.setTime(obj.getTime());
       return copy;
+    } else if (moment.isMoment(obj)) {
+      return moment(obj);
     }
 
     // Handle Array

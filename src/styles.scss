@@ -1,22 +1,58 @@
-$blue: #075e7d;
-$green: green;
+$blue: #058ba2;
+$green: #388104;
 $purple: purple;
-$yellow: yellow;
+$yellow: #c9b40b;
+$red: #b72f2f;
 $black: #000000;
+$white: #ffffff;
+$orange: orange;
 
-$onyx: #454545;
-$deep-taupe: #6d5959;
-$carrot-orange: #ed9b40;
-$wild-blue-yonder: #a3a5c3;
-$russian-green: #629460;
+$theme-1: #519872;
+$theme-2: #a53860;
+$theme-3: #160f29;
+$theme-4: #0094c6;
+$theme-5: #816e94;
 
-/* ----- ----- */
+/* ----- Globals ----- */
+body {
+  margin: 0;
+}
+
+a {
+  transition: 200ms linear color;
+
+  &:link {
+    color: #3a0a65;
+  }
+
+  &:visited {
+    color: #700000;
+  }
+
+  &:hover {
+    color: blue;
+  }
+
+  &:active {
+    color: yellow;
+  }
+}
+
+/* ----- Utils ----- */
 .grid {
   display: grid;
 }
 
 .inline-block {
   display: inline-block;
+}
+
+.center {
+  text-align: center;
+}
+
+.white-text {
+  color: $white;
 }
 
 /* ----- CW Episodes ----- */
@@ -45,7 +81,7 @@ $russian-green: #629460;
 }
 
 .season-1 {
-  background-color: #b72f2f;
+  background-color: $red;
 }
 
 .season-2 {
@@ -53,15 +89,15 @@ $russian-green: #629460;
 }
 
 .season-3 {
-  background-color: #c9b40b;
+  background-color: $yellow;
 }
 
 .season-4 {
-  background-color: #388104;
+  background-color: $green;
 }
 
 .season-5 {
-  background-color: #058ba2;
+  background-color: $blue;
 }
 
 .season-6 {

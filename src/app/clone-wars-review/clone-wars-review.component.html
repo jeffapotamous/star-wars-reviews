@@ -1,1 +1,43 @@
-<p>clone-wars-review works!</p>
+<h2 class="white-text">Clone Wars Ranked</h2>
+
+<div class="grid" id="best-of-episodes-grid">
+  <div class="inline-block episode-class-container" id="great-container">
+    <h4 class="center">Great</h4>
+    <div *ngFor="let episode of bestCloneWarsEpisodes; let index = index">
+      <sup class="ranked-index-number">{{index + 1}}</sup> - ({{episode.season}}: {{episode.episode}})
+      <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+        {{episode.name}}
+      </a>
+    </div>
+  </div>
+
+  <div class="inline-block episode-class-container" id="good-container">
+    <h4 class="center">Good</h4>
+    <div *ngFor="let episode of goodCloneWarsEpisodes; let index = index">
+      <sup class="ranked-index-number">{{index + 1}}</sup> - ({{episode.season}}: {{episode.episode}})
+      <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+        {{episode.name}}
+      </a>
+    </div>
+  </div>
+
+  <div class="inline-block episode-class-container" id="alright-container">
+    <h4 class="center">Alright</h4>
+    <div *ngFor="let episode of alrightCloneWarsEpisodes; let index = index">
+      <sup class="ranked-index-number">{{index + 1}}</sup> - ({{episode.season}}: {{episode.episode}})
+      <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+        {{episode.name}}
+      </a>
+    </div>
+  </div>
+
+  <div class="inline-block episode-class-container" id="bad-container">
+    <h4 class="center">Bad</h4>
+    <div *ngFor="let episode of badCloneWarsEpisodes; let index = index">
+      <sup class="ranked-index-number">{{index + 1}}</sup> - ({{episode.season}}: {{episode.episode}})
+      <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+        {{episode.name}}
+      </a>
+    </div>
+  </div>
+</div>

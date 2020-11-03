@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+#review-books-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.book-container {
+  position: relative;
+  display: inline-block;
+  background-color: $dark-gray;
+  border-radius: 3px;
+  margin-bottom: 31px;
+  padding: 5px 14px;
+}
+
+.rank-index {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  font-style: italic;
+}
+
+.book-note {
+  margin-bottom: 13px;
+}

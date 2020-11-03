@@ -1,33 +1,11 @@
 @import "../../styles.scss";
 
-.episode-class-container {
-  padding: 6px 14px;
-  margin: 0 13px;
-  border-radius: 6px;
-}
-
 #best-of-episodes-grid {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .ranked-episode-item {
   color: $darkest-gray;
-}
-
-#great-container {
-  background-color: $green;
-}
-
-#good-container {
-  background-color: $blue;
-}
-
-#alright-container {
-  background-color: $yellow;
-}
-
-#bad-container {
-  background-color: $red;
 }
 
 .ranked-index-number {

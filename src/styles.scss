@@ -59,6 +59,10 @@ a {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .white-text {
   color: $white;
 }
@@ -114,4 +118,33 @@ a {
 
 .season-7 {
   background-color: #2f3156;
+}
+
+/* ----- Books ----- */
+.book-image {
+  width: 87%;
+}
+
+/* ----- Rannking ----- */
+.ranking-class-container {
+  display: table;
+  padding: 6px 14px;
+  margin: 0 13px;
+  border-radius: 6px;
+}
+
+.great-container {
+  background-color: $green;
+}
+
+.good-container {
+  background-color: $blue;
+}
+
+.alright-container {
+  background-color: $yellow;
+}
+
+.bad-container {
+  background-color: $red;
 }

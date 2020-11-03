@@ -1,6 +1,6 @@
 <div class="grid">
   <div #home class="main-pgae-section">
-    <h1>Jeffapotamous' Star Wars Reviews</h1>
+    <h1>Jeff's Star Wars Reviews</h1>
   </div>
 
   <div #books class="main-pgae-section" id="books-section">
@@ -14,10 +14,20 @@
   <div #chronological class="main-pgae-section" id="clone-wars-chronological-section">
     <app-clone-wars-chronological></app-clone-wars-chronological>
   </div>
+
+  <div #rotsExtended class="main-page-section grid" id="rots-extended-section">
+    <div>
+      <h1>Revenge of the Sith + CW Order 66 Arc</h1>
+      This is a passion project of mine. I cut together the events of Revenge of the Sith with the Clone Wars Season 7
+      Episodes 9-12. It took me 40 hours of planning, capturing, and editing to complete this. I hope you enjoy!
+    </div>
+    <iframe src="https://drive.google.com/file/d/1b56VaIxCcLY98MrDBMN0UDRVbf8Hgdmt/preview" width="560" height="315"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
 
 <div class="grid" id="navigation-panel">
-
   <img class="link icon-image" src="assets/images/icons/chevron-up.png" (click)="scroll(home)">
   <div class="link navigation-item" (click)="scroll(home)">
     Back to Top
@@ -36,5 +46,10 @@
   <img class="link icon-image" src="assets/images/icons/clock.svg" (click)="scroll(chronological)">
   <div class="link navigation-item" (click)="scroll(chronological)">
     Chronological CW
+  </div>
+
+  <img class="link icon-image" src="assets/images/icons/video.png" (click)="scroll(chronological)">
+  <div class="link navigation-item" (click)="scroll(rotsExtended)">
+    RotS Extended Cut
   </div>
 </div>

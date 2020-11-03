@@ -21,9 +21,14 @@
   background-color: $dark-gray;
 }
 
+#rots-extended-section {
+  grid-template-columns: 1fr 560px;
+  padding: 45px 30px;
+}
+
 #navigation-panel {
   position: fixed;
-  grid-template-rows: 35px 35px 35px 35px;
+  grid-template-rows: 35px 35px 35px 35px 35px;
   grid-template-columns: 35px 1fr;
   top: 26px;
   width: 244px;

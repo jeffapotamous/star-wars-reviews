@@ -1,0 +1,73 @@
+$blue: #075e7d;
+$green: green;
+$purple: purple;
+$yellow: yellow;
+$black: #000000;
+
+$onyx: #454545;
+$deep-taupe: #6d5959;
+$carrot-orange: #ed9b40;
+$wild-blue-yonder: #a3a5c3;
+$russian-green: #629460;
+
+/* ----- ----- */
+.grid {
+  display: grid;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* ----- CW Episodes ----- */
+.disney-plus-link {
+  margin-left: 5px;
+}
+
+.disney-logo {
+  width: 20px;
+}
+
+.episode-item {
+  padding: 6px 5px;
+  background-color: #606060;
+}
+
+.season-label {
+  width: 90px;
+}
+
+.episode-label {
+  width: 90px;
+}
+
+.name-label {
+}
+
+.season-1 {
+  background-color: #b72f2f;
+}
+
+.season-2 {
+  background-color: #de650a;
+}
+
+.season-3 {
+  background-color: #c9b40b;
+}
+
+.season-4 {
+  background-color: #388104;
+}
+
+.season-5 {
+  background-color: #058ba2;
+}
+
+.season-6 {
+  background-color: #a83b80;
+}
+
+.season-7 {
+  background-color: #2f3156;
+}

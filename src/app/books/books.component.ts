@@ -57,6 +57,5 @@ export class BooksComponent implements OnInit {
           break;
       }
     });
-    console.log(this.badCanonBooks)
   }
 }

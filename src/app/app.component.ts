@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BookTagsService } from './services/book-tags.service';
-import { BookService } from './services/book.service';
-import { CloneWarsEpisodesService } from './services/clone-wars-episodes.service';
-import { TagService } from './services/tag.service';
+import { Book, CloneWarsEpisode, Relationship, Tag } from './interfaces/interfaces';
+import { DatabaseService } from './services/database.service';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +14,7 @@ export class AppComponent implements OnInit {
   private totalFilesToLoadCount: number;
 
   constructor(
-    private cloneWarsEpisodesService: CloneWarsEpisodesService,
-    private bookTagsService: BookTagsService,
-    private bookService: BookService,
-    private tagService: TagService
+    private databaseService: DatabaseService
   ) {
     this.loading = true;
     this.currentCount = 0;
@@ -27,15 +22,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cloneWarsEpisodesService.loadCloneWarsEpisodes();
-    this.bookService.loadBooks();
-    this.tagService.loadTags();
-    this.bookTagsService.loadBookTagRelationships();
+    this.databaseService.loadBooks();
+    this.databaseService.loadCloneWarsEpisodes();
+    this.databaseService.loadTags();
+    this.databaseService.loadBookTagRelationships();
 
-    this.cloneWarsEpisodesService.cloneWarsEpisodesLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.bookService.booksLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.tagService.tagsLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.bookTagsService.bookTagRelsLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
+    this.databaseService.booksLoadedRef.subscribe((_data: Book[]) => { this.checkIfDoneLoading(); });
+    this.databaseService.cloneWarsEpisodesLoadedRef.subscribe((_data: CloneWarsEpisode[]) => { this.checkIfDoneLoading(); });
+    this.databaseService.tagsLoadedRef.subscribe((_data: Tag[]) => { this.checkIfDoneLoading(); });
+    this.databaseService.bookTagRelsLoadedRef.subscribe((_data: Relationship[]) => { this.checkIfDoneLoading(); });
   }
 
   public scroll(element: HTMLElement) {

@@ -17,7 +17,7 @@ export class CloneWarsEpisodesService {
     this.cloneWarsEpisodesLoadedRef = new Subject<any>();
   }
 
-  public loadData() {
+  public loadCloneWarsEpisodes() {
     this.http.get('./assets/db/clone-wars-episodes.json').toPromise().then((data: any) => {
       this.listOfCloneWars = data;
       this.cloneWarsEpisodesLoadedRef.next(this.listOfCloneWars);

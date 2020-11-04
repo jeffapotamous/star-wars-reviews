@@ -1,64 +1,66 @@
-<div class="grid">
-  <div #home class="main-pgae-section">
-    <h1>Jeff's Star Wars Reviews</h1>
-  </div>
-
-  <div #books class="main-pgae-section" id="books-section">
-    <app-books></app-books>
-  </div>
-
-  <div #cloneWars class="main-pgae-section" id="clone-wars-review-section">
-    <app-clone-wars-review></app-clone-wars-review>
-  </div>
-
-  <div #chronological class="main-pgae-section" id="clone-wars-chronological-section">
-    <app-clone-wars-chronological></app-clone-wars-chronological>
-  </div>
-
-  <div #rotsExtended class="main-page-section grid" id="rots-extended-section">
-    <div>
-      <h1>Revenge of the Sith + CW Order 66 Arc</h1>
-      This is a passion project of mine. I cut together the events of Revenge of the Sith with the Clone Wars Season 7
-      Episodes 9-12. It took me 40 hours of planning, capturing, and editing to complete this. I hope you enjoy!
+<ng-container *ngIf="!loading">
+  <div class="grid">
+    <div #home class="main-pgae-section">
+      <h1>Jeff's Star Wars Reviews</h1>
     </div>
-    <iframe src="https://drive.google.com/file/d/1b56VaIxCcLY98MrDBMN0UDRVbf8Hgdmt/preview" width="560" height="315"
-      allowfullscreen>
-    </iframe>
+
+    <div #books class="main-pgae-section" id="books-section">
+      <app-books></app-books>
+    </div>
+
+    <div #cloneWars class="main-pgae-section" id="clone-wars-review-section">
+      <app-clone-wars-review></app-clone-wars-review>
+    </div>
+
+    <div #chronological class="main-pgae-section" id="clone-wars-chronological-section">
+      <app-clone-wars-chronological></app-clone-wars-chronological>
+    </div>
+
+    <div #rotsExtended class="main-page-section grid" id="rots-extended-section">
+      <div>
+        <h1>Revenge of the Sith + CW Order 66 Arc</h1>
+        This is a passion project of mine. I cut together the events of Revenge of the Sith with the Clone Wars Season 7
+        Episodes 9-12. It took me 40 hours of planning, capturing, and editing to complete this. I hope you enjoy!
+      </div>
+      <iframe src="https://drive.google.com/file/d/1b56VaIxCcLY98MrDBMN0UDRVbf8Hgdmt/preview" width="560" height="315"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="main-page-section" id="footer-section">
+      <span class="float-right">
+        Jeffrey Buehler - 2020
+        <a href="https://github.com/buehlerj/star-wars-reviews" target="_blank">
+          <img id="gh-icon" src="assets/images/icons/github.png">
+        </a>
+      </span>
+    </div>
   </div>
 
-  <div class="main-page-section" id="footer-section">
-    <span class="float-right">
-      Jeffrey Buehler - 2020
-      <a href="https://github.com/buehlerj/star-wars-reviews" target="_blank">
-        <img id="gh-icon" src="assets/images/icons/github.png">
-      </a>
-    </span>
-  </div>
-</div>
+  <div class="grid" id="navigation-panel">
+    <img class="link icon-image" src="assets/images/icons/chevron-up.png" (click)="scroll(home)">
+    <div class="link navigation-item" (click)="scroll(home)">
+      Back to Top
+    </div>
 
-<div class="grid" id="navigation-panel">
-  <img class="link icon-image" src="assets/images/icons/chevron-up.png" (click)="scroll(home)">
-  <div class="link navigation-item" (click)="scroll(home)">
-    Back to Top
-  </div>
+    <img class="link icon-image" src="assets/images/icons/book.png" (click)="scroll(books)">
+    <div class="link navigation-item" (click)="scroll(books)">
+      Books
+    </div>
 
-  <img class="link icon-image" src="assets/images/icons/book.png" (click)="scroll(books)">
-  <div class="link navigation-item" (click)="scroll(books)">
-    Books
-  </div>
+    <img class="link icon-image" src="assets/images/clone wars.png" (click)="scroll(cloneWars)">
+    <div class="link navigation-item" (click)="scroll(cloneWars)">
+      Clone Wars
+    </div>
 
-  <img class="link icon-image" src="assets/images/clone wars.png" (click)="scroll(cloneWars)">
-  <div class="link navigation-item" (click)="scroll(cloneWars)">
-    Clone Wars
-  </div>
+    <img class="link icon-image" src="assets/images/icons/clock.svg" (click)="scroll(chronological)">
+    <div class="link navigation-item" (click)="scroll(chronological)">
+      Chronological CW
+    </div>
 
-  <img class="link icon-image" src="assets/images/icons/clock.svg" (click)="scroll(chronological)">
-  <div class="link navigation-item" (click)="scroll(chronological)">
-    Chronological CW
+    <img class="link icon-image" src="assets/images/icons/video.png" (click)="scroll(chronological)">
+    <div class="link navigation-item" (click)="scroll(rotsExtended)">
+      RotS Extended Cut
+    </div>
   </div>
-
-  <img class="link icon-image" src="assets/images/icons/video.png" (click)="scroll(chronological)">
-  <div class="link navigation-item" (click)="scroll(rotsExtended)">
-    RotS Extended Cut
-  </div>
-</div>
+</ng-container>

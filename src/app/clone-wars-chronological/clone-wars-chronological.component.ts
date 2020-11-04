@@ -17,9 +17,7 @@ export class CloneWarsChronologicalComponent implements OnInit {
   constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private bookTagsService: BookTagsService) { }
 
   ngOnInit(): void {
-    this.cloneWarsEpisodesService.cloneWarsEpisodesLoadedRef.subscribe((_data: any) => {
-      this.chronologicalEpisodes = this.cloneWarsEpisodesService.getCloneWarsEpisodesChronological();
-    });
+    this.chronologicalEpisodes = this.cloneWarsEpisodesService.getCloneWarsEpisodesChronological();
   }
 
   public add(input) {

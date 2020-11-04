@@ -14,147 +14,15 @@
 </div>
 
 <div class="grid">
-  <div class="ranking-class-container great-container">
-    <h3 class="center">Great</h3>
-    <div class="book-container" *ngFor="let book of bestCanonBooks; let index = index">
-      <div class="rank-index">{{index + 1}}</div>
+  <app-book-section [rankingClass]="'great'" [booksList]="bestCanonBooks">
+  </app-book-section>
 
-      <div class="purchase-links-container">
-        <a *ngIf="book.googlePlayLink" href="{{book.googlePlayLink}}" target="_blank">
-          <img src="assets/images/gps.png">
-        </a>
-        <a *ngIf="book.amazonLink" href="{{book.amazonLink}}" target="_blank">
-          <img src="assets/images/amazon.png">
-        </a>
-      </div>
+  <app-book-section [rankingClass]="'good'" [booksList]="goodCanonBooks">
+  </app-book-section>
 
-      <div class="center">
-        <h4>
-          {{book.name}}
-        </h4>
-        <img class="book-image" src="assets/images/books/{{book.fileName}}">
-        <div>
-          <h4>Pros</h4>
-          <p class="left">
-            {{book.pros}}
-          </p>
-        </div>
-        <div>
-          <h4>Cons</h4>
-          <p class="left">
-            {{book.cons}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-book-section [rankingClass]="'alright'" [booksList]="alrightCanonBooks" [headerClass]="'dark-gray-text'">
+  </app-book-section>
 
-  <div class="ranking-class-container good-container">
-    <h3 class="center">Good</h3>
-    <div class="book-container" *ngFor="let book of goodCanonBooks; let index = index">
-      <div class="rank-index">{{index + 1}}</div>
-
-      <div class="purchase-links-container">
-        <a *ngIf="book.googlePlayLink" href="{{book.googlePlayLink}}" target="_blank">
-          <img src="assets/images/gps.png">
-        </a>
-        <a *ngIf="book.amazonLink" href="{{book.amazonLink}}" target="_blank">
-          <img src="assets/images/amazon.png">
-        </a>
-      </div>
-
-      <div class="center">
-        <h4>
-          {{book.name}}
-        </h4>
-        <img class="book-image" src="assets/images/books/{{book.fileName}}">
-        <div>
-          <h4>Pros</h4>
-          <p class="left">
-            {{book.pros}}
-          </p>
-        </div>
-        <div>
-          <h4>Cons</h4>
-          <p class="left">
-            {{book.cons}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ranking-class-container alright-container">
-    <h3 class="center dark-gray-text">Alright</h3>
-    <div class="book-container" *ngFor="let book of alrightCanonBooks; let index = index">
-      <div class="rank-index">{{index + 1}}</div>
-
-      <div class="purchase-links-container">
-        <a *ngIf="book.googlePlayLink" href="{{book.googlePlayLink}}" target="_blank">
-          <img src="assets/images/gps.png">
-        </a>
-        <a *ngIf="book.amazonLink" href="{{book.amazonLink}}" target="_blank">
-          <img src="assets/images/amazon.png">
-        </a>
-      </div>
-
-      <div class="center">
-        <h4>
-          {{book.name}}
-        </h4>
-        <img class="book-image" src="assets/images/books/{{book.fileName}}">
-        <div>
-          <h4>Pros</h4>
-          <p class="left">
-            {{book.pros}}
-          </p>
-        </div>
-        <div>
-          <h4>Cons</h4>
-          <p class="left">
-            {{book.cons}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ranking-class-container bad-container">
-    <h3 class="center">Bad</h3>
-    <div class="book-container" *ngFor="let book of badCanonBooks; let index = index">
-      <div class="rank-index">{{index + 1}}</div>
-
-      <div class="purchase-links-container">
-        <a *ngIf="book.googlePlayLink" href="{{book.googlePlayLink}}" target="_blank">
-          <img src="assets/images/gps.png">
-        </a>
-        <a *ngIf="book.amazonLink" href="{{book.amazonLink}}" target="_blank">
-          <img src="assets/images/amazon.png">
-        </a>
-      </div>
-
-      <div class="center">
-        <h4>
-          {{book.name}}
-        </h4>
-        <img class="book-image" src="assets/images/books/{{book.fileName}}">
-        <div>
-          <h4>Pros</h4>
-          <p class="left">
-            {{book.pros}}
-          </p>
-        </div>
-        <div>
-          <h4>Cons</h4>
-          <p class="left">
-            {{book.cons}}
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="badCanonBooks.length === 0">
-      Of course there are no bad SW books!
-    </div>
-  </div>
+  <app-book-section [rankingClass]="'bad'" [booksList]="badCanonBooks">
+  </app-book-section>
 </div>

@@ -10,6 +10,7 @@ import { TableComponent } from './utils/table/table.component';
 
 import { TableModule } from 'primeng/table';
 import { TableDataClassPipe } from './pipes/table-data-class.pipe';
+import { BookSectionComponent } from './utils/book-section/book-section.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { TableDataClassPipe } from './pipes/table-data-class.pipe';
     CloneWarsReviewComponent,
     CloneWarsChronologicalComponent,
     TableComponent,
-    TableDataClassPipe
+    TableDataClassPipe,
+    BookSectionComponent
   ],
   imports: [
     BrowserModule,

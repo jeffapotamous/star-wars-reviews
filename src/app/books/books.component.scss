@@ -1,40 +1,5 @@
 @import "../../styles.scss";
 
-.book-container {
-  position: relative;
-  display: inline-flex;
-  background-color: $dark-gray;
-  border-radius: 3px;
-  margin: 0 15px 25px 0;
-  padding: 16px 14px 5px;
-  width: 300px;
-}
-
-.rank-index {
-  position: absolute;
-  left: 10px;
-  font-style: italic;
-  font-size: 1.3em;
-}
-
 .book-note {
   margin-bottom: 17px;
-}
-
-.purchase-links-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: right;
-  height: 27px;
-
-  a {
-    display: inline-block;
-    height: 100%;
-    padding: 5px 4px;
-
-    img {
-      height: 100%;
-    }
-  }
 }

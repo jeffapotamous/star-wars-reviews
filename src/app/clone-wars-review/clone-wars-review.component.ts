@@ -28,12 +28,14 @@ export class CloneWarsReviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cloneWarsEpisodesService.getCloneWarsEpisodes().forEach((episode: CloneWarsEpisode, index: number) => {
-      const episodeData: any = episode;
-      episodeData.disneyPlus = { image: 'assets/images/icon.png', link: episodeData.link, class: 'disney-logo' };
-      episodeData.rankOrder = index + 1;
+    this.cloneWarsEpisodesService.cloneWarsEpisodesLoadedRef.subscribe((_data: any) => {
+      this.cloneWarsEpisodesService.getCloneWarsEpisodes().forEach((episode: CloneWarsEpisode, index: number) => {
+        const episodeData: any = episode;
+        episodeData.disneyPlus = { image: 'assets/images/icon.png', link: episodeData.link, class: 'disney-logo' };
+        episodeData.rankOrder = index + 1;
 
-      this.tableData.push(episodeData);
+        this.tableData.push(episodeData);
+      });
     });
   }
 

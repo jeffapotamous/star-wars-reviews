@@ -1,6 +1,6 @@
 <div class="grid" id="chronological-episodes-grid">
   <div id="chronological-episodes-key">
-    <h4>Seasons</h4>
+    <h4 (click)="print()">Seasons</h4>
     <p class="season-key-label season-1">Season 1</p>
     <p class="season-key-label season-2">Season 2</p>
     <p class="season-key-label season-3">Season 3</p>
@@ -12,7 +12,8 @@
 
   <div id="chronological-episodes-list">
     <div *ngFor="let episode of chronologicalEpisodes; let index = index" class="episode-item season-{{episode.season}}"
-      [class.separator]="chronologicalEpisodes[index + 1] && episode.releaseOrder !== (chronologicalEpisodes[index + 1].releaseOrder - 1)">
+      [class.separator]="chronologicalEpisodes[index + 1] && episode.releaseOrder !== (chronologicalEpisodes[index + 1].releaseOrder - 1)"
+      (click)="add(episode)">
       <span *ngIf="episode.season" class="inline-block season-label">
         Season: {{episode.season}}
       </span>
@@ -49,9 +50,13 @@
       <p>Each episode has a Disney+ link to the right of it. If you have a Disney+ account, you can click that link to
         jump directly to that episode.</p>
       <p>1. Start at the top! Click on the link for the first episode at the top.</p>
-      <p>2. Continue down the list. If you run into one of the dividers, close the Disney+ video you're watching and click on the new link. If the next episode on the list is in the same container, then you can just let the Disney+ auto-play continue (or click on the "Play Next Episode In" button).</p>
-      <p>Example: If you just finished the episode "Cat and Mouse", close out of Disney+ and click on the link for Hidden Enemy.</p>
-      <p>Example 2: If you just finished the episode "Ambush", continue watching through Disney+ until you've reached the episode "Trespass"</p>
+      <p>2. Continue down the list. If you run into one of the dividers, close the Disney+ video you're watching and
+        click on the new link. If the next episode on the list is in the same container, then you can just let the
+        Disney+ auto-play continue (or click on the "Play Next Episode In" button).</p>
+      <p>Example: If you just finished the episode "Cat and Mouse", close out of Disney+ and click on the link for
+        Hidden Enemy.</p>
+      <p>Example 2: If you just finished the episode "Ambush", continue watching through Disney+ until you've reached
+        the episode "Trespass"</p>
     </div>
   </div>
 </div>

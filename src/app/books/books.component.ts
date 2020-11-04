@@ -29,33 +29,35 @@ export class BooksComponent implements OnInit {
 
     let code: ReviewClass = ReviewClass.BEST;
 
-    this.bookService.getListOfBooks().forEach((episode: Book) => {
-      switch (code) {
-        case ReviewClass.BEST:
-          this.bestCanonBooks.push(episode);
-          break;
-        case ReviewClass.GOOD:
-          this.goodCanonBooks.push(episode);
-          break;
-        case ReviewClass.ALRIGHT:
-          this.alrightCanonBooks.push(episode);
-          break;
-        case ReviewClass.BAD:
-          this.badCanonBooks.push(episode);
-          break;
-      }
+    this.bookService.booksLoadedRef.subscribe((_data: any) => {
+      this.bookService.getListOfBooks().forEach((episode: Book) => {
+        switch (code) {
+          case ReviewClass.BEST:
+            this.bestCanonBooks.push(episode);
+            break;
+          case ReviewClass.GOOD:
+            this.goodCanonBooks.push(episode);
+            break;
+          case ReviewClass.ALRIGHT:
+            this.alrightCanonBooks.push(episode);
+            break;
+          case ReviewClass.BAD:
+            this.badCanonBooks.push(episode);
+            break;
+        }
 
-      switch (episode.id) {
-        case lastBestEpisode:
-          code = ReviewClass.GOOD;
-          break;
-        case lastGoodEpisode:
-          code = ReviewClass.ALRIGHT;
-          break;
-        case lastAlrightEpisode:
-          code = ReviewClass.BAD;
-          break;
-      }
+        switch (episode.id) {
+          case lastBestEpisode:
+            code = ReviewClass.GOOD;
+            break;
+          case lastGoodEpisode:
+            code = ReviewClass.ALRIGHT;
+            break;
+          case lastAlrightEpisode:
+            code = ReviewClass.BAD;
+            break;
+        }
+      });
     });
   }
 }

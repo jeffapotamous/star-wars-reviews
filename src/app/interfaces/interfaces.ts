@@ -1,6 +1,5 @@
-import * as moment from 'moment';
-
 export interface CloneWarsEpisode {
+	id: number;
 	name: string;
 	season?: number;
 	episode?: number;
@@ -12,7 +11,6 @@ export interface CloneWarsEpisode {
 export interface Book {
 	id: number;
 	name: string;
-	releaseDate: moment.Moment;
 	pros: string;
 	cons: string;
 	fileName: string;
@@ -28,4 +26,14 @@ export interface TableColumn {
 	style?: any;
 	classCompare?: string;
 	type?: string;
+}
+
+export interface Tag {
+	id: number;
+	name: string;
+}
+
+export interface Relationship {
+	table1: number;
+	table2: number;
 }

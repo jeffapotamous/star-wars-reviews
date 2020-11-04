@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CloneWarsEpisode } from '../interfaces/interfaces';
+import { BookTagsService } from '../services/book-tags.service';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
 
 @Component({
@@ -11,10 +12,22 @@ export class CloneWarsChronologicalComponent implements OnInit {
 
   public chronologicalEpisodes: CloneWarsEpisode[];
 
-  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService) { }
+  private list = [];
+
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private bookTagsService: BookTagsService) { }
 
   ngOnInit(): void {
-    this.chronologicalEpisodes = this.cloneWarsEpisodesService.getCloneWarsEpisodesChronological();
+    this.cloneWarsEpisodesService.cloneWarsEpisodesLoadedRef.subscribe((_data: any) => {
+      this.chronologicalEpisodes = this.cloneWarsEpisodesService.getCloneWarsEpisodesChronological();
+    });
+  }
+
+  public add(input) {
+    this.list.push(input.id);
+  }
+
+  public print() {
+    console.log(this.list);
   }
 
 }

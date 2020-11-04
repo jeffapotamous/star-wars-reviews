@@ -1,37 +1,57 @@
-<div>
-  <h1>Star Wars: The Clone Wars Chronological Order</h1>
+<div class="grid" id="chronological-episodes-grid">
+  <div id="chronological-episodes-key">
+    <h4>Seasons</h4>
+    <p class="season-key-label season-1">Season 1</p>
+    <p class="season-key-label season-2">Season 2</p>
+    <p class="season-key-label season-3">Season 3</p>
+    <p class="season-key-label season-4">Season 4</p>
+    <p class="season-key-label season-5">Season 5</p>
+    <p class="season-key-label season-6">Season 6</p>
+    <p class="season-key-label season-7">Season 7</p>
+  </div>
 
-  <div class="grid" id="chronological-episodes-grid">
-    <div id="chronological-episodes-key">
-      <h4>Seasons</h4>
-      <p class="season-key-label season-1">Season 1</p>
-      <p class="season-key-label season-2">Season 2</p>
-      <p class="season-key-label season-3">Season 3</p>
-      <p class="season-key-label season-4">Season 4</p>
-      <p class="season-key-label season-5">Season 5</p>
-      <p class="season-key-label season-6">Season 6</p>
-      <p class="season-key-label season-7">Season 7</p>
+  <div id="chronological-episodes-list">
+    <div *ngFor="let episode of chronologicalEpisodes; let index = index" class="episode-item season-{{episode.season}}"
+      [class.separator]="chronologicalEpisodes[index + 1] && episode.releaseOrder !== (chronologicalEpisodes[index + 1].releaseOrder - 1)">
+      <span *ngIf="episode.season" class="inline-block season-label">
+        Season: {{episode.season}}
+      </span>
+
+      <span *ngIf="episode.episode" class="inline-block episode-label">
+        Episode: {{episode.episode}}
+      </span>
+
+      <span class="inline-block name-label">
+        {{episode.name}}
+        <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
+          <img class="disney-logo" src="assets/images/icon.png">
+        </a>
+      </span>
     </div>
+  </div>
 
-    <div id="chronological-episodes-list">
-      <div *ngFor="let episode of chronologicalEpisodes; let index = index"
-        class="episode-item season-{{episode.season}}"
-        [class.separator]="chronologicalEpisodes[index + 1] && episode.releaseOrder !== (chronologicalEpisodes[index + 1].releaseOrder - 1)">
-        <span *ngIf="episode.season" class="inline-block season-label">
-          Season: {{episode.season}}
-        </span>
+  <div id="chronological-episodes-description">
+    <h1>Star Wars: The Clone Wars Chronological Order</h1>
+    <p>Star Wars: The Clone Wars is a show that initially released as a movie on August 15th, 2008, then turned into a
+      TV show that ran intermittently from October 3, 2008 to May 4th, 2020. During this time, many different stories
+      were told about the events of the Clone Wars, bundled together in what arcs. These arcs are told to the viewer in
+      story form, as if a recollection of the Clone Wars years. The Clone Wars took place between the years of 22-19 BBY
+      (Before the Battle of Yavin). That said, these episodes did not get released in Chronological order.</p>
+    <p>To the left is a list of all Clone Wars episodes (including the Movie) sorted by chronological order. Each
+      episode is color coded to get a better understanding of how the show was initially envisioned by George Lucas and
+      Dave Filoni.</p>
+    <p>Although release order and chronological order differ significantly, there are many continuous stories told in
+      release order. I have made a separation line between jumps in episodes to help keep track of where the clone wars
+      episodes change in historical time.</p>
 
-        <span *ngIf="episode.episode" class="inline-block episode-label">
-          Episode: {{episode.episode}}
-        </span>
-
-        <span class="inline-block name-label">
-          {{episode.name}}
-          <a class="disney-plus-link" href="{{episode.link}}" target="_blank" title="{{episode.name}} on Disney +">
-            <img class="disney-logo" src="assets/images/icon.png">
-          </a>
-        </span>
-      </div>
+    <div>
+      <h3>How To Watch Chronologically</h3>
+      <p>Each episode has a Disney+ link to the right of it. If you have a Disney+ account, you can click that link to
+        jump directly to that episode.</p>
+      <p>1. Start at the top! Click on the link for the first episode at the top.</p>
+      <p>2. Continue down the list. If you run into one of the dividers, close the Disney+ video you're watching and click on the new link. If the next episode on the list is in the same container, then you can just let the Disney+ auto-play continue (or click on the "Play Next Episode In" button).</p>
+      <p>Example: If you just finished the episode "Cat and Mouse", close out of Disney+ and click on the link for Hidden Enemy.</p>
+      <p>Example 2: If you just finished the episode "Ambush", continue watching through Disney+ until you've reached the episode "Trespass"</p>
     </div>
   </div>
 </div>

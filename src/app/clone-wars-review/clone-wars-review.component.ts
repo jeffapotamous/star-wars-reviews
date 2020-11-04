@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ReviewClass } from '../interfaces/enums';
-import { CloneWarsEpisode, TableColumn } from '../interfaces/interfaces';
+import { CloneWarsEpisode, Relationship, TableColumn } from '../interfaces/interfaces';
+import { BookTagsService } from '../services/book-tags.service';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class CloneWarsReviewComponent implements OnInit {
   public tableColumns: TableColumn[];
   public tableData: any[];
 
-  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService) {
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private bookTagsService: BookTagsService) {
     this.tableColumns = [
       { header: 'Season', field: 'season', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'season' },
       { header: 'Episode', field: 'episode', sort: false, style: { width: '100px', align: 'right' } },

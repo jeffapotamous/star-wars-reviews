@@ -1,0 +1,38 @@
+<div class="ranking-class-container {{rankingClass}}-container">
+  <h3 class="center {{headerClass}}">{{ rankingClass | titlecase }}</h3>
+  <div class="book-container" *ngFor="let book of booksList; let index = index">
+    <div class="rank-index">{{index + 1}}</div>
+
+    <div class="purchase-links-container">
+      <a *ngIf="book.googlePlayLink" href="{{book.googlePlayLink}}" target="_blank">
+        <img src="assets/images/gps.png">
+      </a>
+      <a *ngIf="book.amazonLink" href="{{book.amazonLink}}" target="_blank">
+        <img src="assets/images/amazon.png">
+      </a>
+    </div>
+
+    <div class="center">
+      <h4>
+        {{book.name}}
+      </h4>
+      <img class="book-image" src="assets/images/books/{{book.fileName}}">
+      <div>
+        <h4>Pros</h4>
+        <p class="left">
+          {{book.pros}}
+        </p>
+      </div>
+      <div>
+        <h4>Cons</h4>
+        <p class="left">
+          {{book.cons}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="booksList.length === 0">
+    Of course there are no {{rankingClass}} SW books!
+  </div>
+</div>

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { CloneWarsReviewComponent } from './clone-wars-review/clone-wars-review.component';
 import { CloneWarsChronologicalComponent } from './clone-wars-chronological/clone-wars-chronological.component';
-import { TableComponent } from './utilities/table/table.component';
+import { TableComponent } from './utils/table/table.component';
 
 import { TableModule } from 'primeng/table';
 import { TableDataClassPipe } from './pipes/table-data-class.pipe';

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Book, CloneWarsEpisode, Relationship, Tag } from './interfaces/interfaces';
 import { BookTagsService } from './services/book-tags.service';
 import { BookService } from './services/book.service';
 import { CloneWarsEpisodesService } from './services/clone-wars-episodes.service';
+import { DatabaseService } from './services/database.service';
 import { TagService } from './services/tag.service';
 
 @Component({
@@ -16,6 +18,7 @@ export class AppComponent implements OnInit {
   private totalFilesToLoadCount: number;
 
   constructor(
+    private databaseService: DatabaseService,
     private cloneWarsEpisodesService: CloneWarsEpisodesService,
     private bookTagsService: BookTagsService,
     private bookService: BookService,
@@ -27,15 +30,30 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cloneWarsEpisodesService.loadCloneWarsEpisodes();
-    this.bookService.loadBooks();
-    this.tagService.loadTags();
-    this.bookTagsService.loadBookTagRelationships();
+    this.databaseService.loadCloneWarsEpisodes();
+    this.databaseService.loadBooks();
+    this.databaseService.loadTags();
+    this.databaseService.loadBookTagRelationships();
 
-    this.cloneWarsEpisodesService.cloneWarsEpisodesLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.bookService.booksLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.tagService.tagsLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
-    this.bookTagsService.bookTagRelsLoadedRef.subscribe((_data: any) => { this.checkIfDoneLoading() });
+    this.databaseService.cloneWarsEpisodesLoadedRef.subscribe((data: CloneWarsEpisode[]) => {
+      this.cloneWarsEpisodesService.setCloneWarsEpisodes(data);
+      this.checkIfDoneLoading();
+    });
+
+    this.databaseService.booksLoadedRef.subscribe((data: Book[]) => {
+      this.bookService.setListOfBooks(data);
+      this.checkIfDoneLoading();
+    });
+
+    this.databaseService.tagsLoadedRef.subscribe((data: Tag[]) => {
+      this.tagService.setTags(data);
+      this.checkIfDoneLoading();
+    });
+
+    this.databaseService.bookTagRelsLoadedRef.subscribe((data: Relationship[]) => {
+      this.bookTagsService.setBookTagRelationships(data);
+      this.checkIfDoneLoading();
+    });
   }
 
   public scroll(element: HTMLElement) {

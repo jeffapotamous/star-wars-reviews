@@ -1,8 +1,7 @@
 @import "../../styles.scss";
 
 #chronological-episodes-grid {
-  grid-template-columns: 221px 506px;
-  
+  grid-template-columns: 221px 506px 1fr;
 }
 
 .separator {
@@ -22,6 +21,10 @@
 
 #chronological-episodes-key {
   text-align: center;
+}
+
+#chronological-episodes-description {
+  padding: 0 27px;
 }
 
 .season-key-label {

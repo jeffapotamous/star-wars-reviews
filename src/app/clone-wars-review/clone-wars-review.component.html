@@ -31,5 +31,13 @@
   </div>
 </div>
 
+<div id="clone-wars-filter">
+  <select (change)="filterTable($event)">
+    <option [value]="null"></option>
+    <option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</option>
+  </select>
+  {{tableData.length}} Episodes
+</div>
+
 <app-table [columns]="tableColumns" [tableData]="tableData">
 </app-table>

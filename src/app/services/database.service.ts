@@ -64,7 +64,7 @@ export class DatabaseService {
   }
 
   public loadCwTagRelationships() {
-    this.http.get('./assets/db/tag-books.json').toPromise().then((data: Relationship[]) => {
+    this.http.get('./assets/db/tag-cw.json').toPromise().then((data: Relationship[]) => {
       this.cwTagsService.setCwTagRelationships(data);
       this.cwTagRelsLoadedRef.next(data);
     });

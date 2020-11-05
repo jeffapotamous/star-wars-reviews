@@ -28,4 +28,19 @@ export class CloneWarsEpisodesService {
     const episodesCopy = this.utilsService.deepCopy(this.cloneWarsEpisodes);
     return episodesCopy.sort((a: CloneWarsEpisode, b: CloneWarsEpisode) => a.releaseOrder - b.releaseOrder);
   }
+
+  public getEpisodeByID(id: number): CloneWarsEpisode {
+    return this.cloneWarsEpisodes.find((episode: CloneWarsEpisode) => episode.id === id);
+  }
+
+  public getEpisodeByIDs(ids: number[]): CloneWarsEpisode[] {
+    const listOfEpisodes: CloneWarsEpisode[] = [];
+
+    this.cloneWarsEpisodes.forEach((episode: CloneWarsEpisode) => {
+      if (ids.includes(episode.id)) {
+        listOfEpisodes.push(episode);
+      }
+    });
+    return listOfEpisodes;
+  }
 }

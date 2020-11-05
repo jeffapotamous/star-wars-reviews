@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CloneWarsEpisode, Relationship, TableColumn } from '../interfaces/interfaces';
-import { BookTagsService } from '../services/book-tags.service';
+import { CloneWarsEpisode, TableColumn, Tag } from '../interfaces/interfaces';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
+import { CwTagsService } from '../services/cw-tags.service';
+import { TagService } from '../services/tag.service';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-clone-wars-review',
@@ -10,11 +12,15 @@ import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.servic
 })
 export class CloneWarsReviewComponent implements OnInit {
 
+  /* ----- Tags ----- */
+  public tags: Tag[];
+
   /* ----- Table ----- */
   public tableColumns: TableColumn[];
   public tableData: any[];
+  private tableDataCopy: any[];
 
-  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private bookTagsService: BookTagsService) {
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private tagService: TagService, private cwTagsService: CwTagsService, private utilsService: UtilsService) {
     this.tableColumns = [
       { header: 'Season', field: 'season', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'season' },
       { header: 'Episode', field: 'episode', sort: false, style: { width: '100px', align: 'right' } },
@@ -35,6 +41,17 @@ export class CloneWarsReviewComponent implements OnInit {
 
       this.tableData.push(episodeData);
     });
+    this.tableDataCopy = this.tableData;
+
+    this.tags = this.tagService.getTags();
+  }
+
+  public filterTable(input: any) {
+    if (input.target.value === 'null') {
+      this.tableData = this.tableDataCopy;
+    } else {
+      this.tableData = this.cwTagsService.getCloneWarsEpisodesByTag(parseInt(input.target.value));
+    }
   }
 
 }

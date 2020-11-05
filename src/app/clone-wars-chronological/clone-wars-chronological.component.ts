@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CloneWarsEpisode } from '../interfaces/interfaces';
-import { BookTagsService } from '../services/book-tags.service';
 import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class CloneWarsChronologicalComponent implements OnInit {
 
   private list = [];
 
-  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private bookTagsService: BookTagsService) { }
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService) { }
 
   ngOnInit(): void {
     this.chronologicalEpisodes = this.cloneWarsEpisodesService.getCloneWarsEpisodesChronological();

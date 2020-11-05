@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ) {
     this.loading = true;
     this.currentCount = 0;
-    this.totalFilesToLoadCount = 4;
+    this.totalFilesToLoadCount = 5;
   }
 
   ngOnInit() {
@@ -26,11 +26,13 @@ export class AppComponent implements OnInit {
     this.databaseService.loadCloneWarsEpisodes();
     this.databaseService.loadTags();
     this.databaseService.loadBookTagRelationships();
+    this.databaseService.loadCwTagRelationships();
 
     this.databaseService.booksLoadedRef.subscribe((_data: Book[]) => { this.checkIfDoneLoading(); });
     this.databaseService.cloneWarsEpisodesLoadedRef.subscribe((_data: CloneWarsEpisode[]) => { this.checkIfDoneLoading(); });
     this.databaseService.tagsLoadedRef.subscribe((_data: Tag[]) => { this.checkIfDoneLoading(); });
     this.databaseService.bookTagRelsLoadedRef.subscribe((_data: Relationship[]) => { this.checkIfDoneLoading(); });
+    this.databaseService.cwTagRelsLoadedRef.subscribe((_data: Relationship[]) => { this.checkIfDoneLoading(); });
   }
 
   public scroll(element: HTMLElement) {

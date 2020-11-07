@@ -1,5 +1,10 @@
 @import "../styles.scss";
 
+$lightsaber-blue: #1febfd;
+$lightsaber-green: #6be044;
+$lightsaber-yellow: #ffdf31;
+$lightsaber-red: #ce1616;
+
 .main-pgae-section {
   padding: 50px;
 }
@@ -36,13 +41,18 @@
   height: 21px;
 }
 
+#time-icon {
+  max-width: 31px;
+  margin-left: 3px;
+}
+
 #navigation-panel {
   position: fixed;
-  grid-template-rows: 35px 35px 35px 35px 35px;
-  grid-template-columns: 35px 1fr;
+  grid-template-rows: repeat(5, 40px);
+  grid-template-columns: 44px 1fr;
   top: 26px;
-  width: 244px;
-  right: -203px;
+  width: 318px;
+  right: -273px;
   transition: 0.5s ease-out;
   font-size: 1.5em;
 
@@ -51,16 +61,115 @@
   }
 }
 
+.preview-navbar {
+  right: -223px !important;
+}
+
 .navigation-item {
+  position: relative;
   text-align: left;
   padding: 4px 10px;
   text-shadow: 1px 1px 1px black;
-
-  background: linear-gradient(to right, #00000000 50%, #ec3f09 50%) left;
-  background-size: 200%;
-  transition: 0.3s ease-out;
+  transition: 200ms linear background-color;
 
   &:hover {
-    background-position: right;
+    background-color: #51515173;
+  }
+}
+
+.lightsaber-blade {
+  position: absolute;
+  height: 3px;
+  width: 90%;
+  transition: 0.3s ease-out;
+}
+
+.lightsaber-hilt {
+  position: absolute;
+  width: 82px;
+  bottom: 0;
+  right: 0;
+}
+
+#kanan {
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-blue 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#anakin {
+  .lightsaber-hilt {
+    bottom: -3px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-blue 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#yoda {
+  .lightsaber-hilt {
+    bottom: -3px;
+    width: 56px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-green 50%) left;
+    background-size: 153%;
+    width: 100%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#rey {
+  .lightsaber-hilt {
+    bottom: -1px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-yellow 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#maul {
+  .lightsaber-hilt {
+    bottom: -12px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-red 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
   }
 }

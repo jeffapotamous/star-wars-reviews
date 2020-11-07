@@ -37,30 +37,41 @@
     </div>
   </div>
 
-  <div class="grid" id="navigation-panel">
+  <div class="grid" [ngClass]="{ 'preview-navbar' : previewHeader && !previewHeaderInterrupted }" id="navigation-panel"
+    (mouseenter)="previewHeaderInterrupted = true">
     <img class="link icon-image" src="assets/images/icons/chevron-up.png" (click)="scroll(home)">
-    <div class="link navigation-item" (click)="scroll(home)">
+    <div class="link navigation-item" id="kanan" (click)="scroll(home)">
       Back to Top
+      <div class="lightsaber-blade"></div>
+      <img class="lightsaber-hilt" src="assets/images/lightsabers/kanan.png">
     </div>
 
     <img class="link icon-image" src="assets/images/icons/book.png" (click)="scroll(books)">
-    <div class="link navigation-item" (click)="scroll(books)">
+    <div class="link navigation-item" id="rey" (click)="scroll(books)">
       Books
+      <div class="lightsaber-blade"></div>
+      <img class="lightsaber-hilt" src="assets/images/lightsabers/rey.png">
     </div>
 
-    <img class="link icon-image" src="assets/images/clone wars.png" (click)="scroll(cloneWars)">
-    <div class="link navigation-item" (click)="scroll(cloneWars)">
+    <img class="link icon-image" src="assets/images/icons/clone wars.png" (click)="scroll(cloneWars)">
+    <div class="link navigation-item" id="yoda" (click)="scroll(cloneWars)">
       Clone Wars
+      <div class="lightsaber-blade"></div>
+      <img class="lightsaber-hilt" src="assets/images/lightsabers/yoda.png">
     </div>
 
-    <img class="link icon-image" src="assets/images/icons/clock.svg" (click)="scroll(chronological)">
-    <div class="link navigation-item" (click)="scroll(chronological)">
+    <img class="link icon-image" id="time-icon" src="assets/images/icons/clock.png" (click)="scroll(chronological)">
+    <div class="link navigation-item" id="anakin" (click)="scroll(chronological)">
       Chronological CW
+      <div class="lightsaber-blade"></div>
+      <img class="lightsaber-hilt" src="assets/images/lightsabers/anakin.png">
     </div>
 
     <img class="link icon-image" src="assets/images/icons/video.png" (click)="scroll(chronological)">
-    <div class="link navigation-item" (click)="scroll(rotsExtended)">
+    <div class="link navigation-item" id="maul" (click)="scroll(rotsExtended)">
       RotS Extended Cut
+      <div class="lightsaber-blade"></div>
+      <img class="lightsaber-hilt" src="assets/images/lightsabers/maul.png">
     </div>
   </div>
 </ng-container>

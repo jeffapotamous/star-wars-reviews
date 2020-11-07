@@ -1,18 +1,18 @@
 <ng-container *ngIf="!loading">
   <div class="grid">
-    <div #home class="main-pgae-section">
-      <h1>Jeff's Star Wars Reviews</h1>
+    <div #home class="main-page-section" id="landing-section">
+      <h1 class="center" id="landing-header">Star Wars Canon Reviews</h1>
     </div>
 
-    <div #books class="main-pgae-section" id="books-section">
+    <div #books class="main-page-section" id="books-section">
       <app-books></app-books>
     </div>
 
-    <div #cloneWars class="main-pgae-section" id="clone-wars-review-section">
+    <div #cloneWars class="main-page-section" id="clone-wars-review-section">
       <app-clone-wars-review></app-clone-wars-review>
     </div>
 
-    <div #chronological class="main-pgae-section" id="clone-wars-chronological-section">
+    <div #chronological class="main-page-section" id="clone-wars-chronological-section">
       <app-clone-wars-chronological></app-clone-wars-chronological>
     </div>
 

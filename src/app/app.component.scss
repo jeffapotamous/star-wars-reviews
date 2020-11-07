@@ -5,12 +5,36 @@ $lightsaber-green: #6be044;
 $lightsaber-yellow: #ffdf31;
 $lightsaber-red: #ce1616;
 
-.main-pgae-section {
+.main-page-section {
   padding: 50px;
 }
 
-.grid {
-  display: grid;
+/* ----- Landing ----- */
+
+#landing-section {
+  background-image: url("../assets/images/mural.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landing-header {
+  color: black;
+  text-shadow: 1px 1px 5px white;
+  height: 79px;
+}
+
+@media only screen and (min-width: 2400px) {
+  #landing-header {
+    height: 154px;
+  }
+}
+
+@media only screen and (min-width: 3100px) {
+  #landing-header {
+    height: 304px;
+  }
 }
 
 #books-section {
@@ -19,7 +43,6 @@ $lightsaber-red: #ce1616;
 
 #clone-wars-review-section {
   background-color: $gray;
-  // background-color: $dark-gray;
 }
 
 #clone-wars-chronological-section {
@@ -73,7 +96,7 @@ $lightsaber-red: #ce1616;
   transition: 200ms linear background-color;
 
   &:hover {
-    background-color: #51515173;
+    background-color: #515151ad;
   }
 }
 

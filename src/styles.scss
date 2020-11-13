@@ -169,3 +169,60 @@ a {
 .bad-container {
   background-color: $red;
 }
+
+.gradient-container {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.great-gradient-container {
+  @extend .gradient-container;
+  background-image: linear-gradient(to right, #0791a7, #6b016b);
+
+  &::before {
+    background-image: linear-gradient(to right, #6b016b, #0791a7);
+  }
+}
+
+.good-gradient-container {
+  @extend .gradient-container;
+  background-image: linear-gradient(to right, #05b1ad, #288302);
+
+  &::before {
+    background-image: linear-gradient(to right, #288302, #05b1ad);
+  }
+}
+
+.alright-gradient-container {
+  @extend .gradient-container;
+  background-image: linear-gradient(to right, #e0e320, #f00d0d);
+
+  &::before {
+    background-image: linear-gradient(to right, #f00d0d, #e0e320);
+  }
+}
+
+.bad-gradient-container {
+  @extend .gradient-container;
+  background-image: linear-gradient(to right, #f00d0d, #6d0a79);
+
+  &::before {
+    background-image: linear-gradient(to right, #6d0a79, #f00d0d);
+  }
+}

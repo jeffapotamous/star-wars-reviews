@@ -19,21 +19,19 @@ $lightsaber-red: #ce1616;
   background-size: cover;
 }
 
-#landing-header {
-  color: black;
-  text-shadow: 1px 1px 5px white;
-  height: 79px;
+#landing-section {
+  height: 122px;
 }
 
 @media only screen and (min-width: 2400px) {
-  #landing-header {
-    height: 154px;
+  #landing-section {
+    height: 197px;
   }
 }
 
 @media only screen and (min-width: 3100px) {
-  #landing-header {
-    height: 304px;
+  #landing-section {
+    height: 347px;
   }
 }
 

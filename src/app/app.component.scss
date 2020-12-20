@@ -76,6 +76,7 @@ $lightsaber-red: #ce1616;
   right: -273px;
   transition: 0.5s ease-out;
   font-size: 1.5em;
+  z-index: 1;
 
   &:hover {
     right: 0;

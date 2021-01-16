@@ -12,6 +12,8 @@ import { TableComponent } from './utils/table/table.component';
 import { TableModule } from 'primeng/table';
 import { TableDataClassPipe } from './pipes/table-data-class.pipe';
 import { BookSectionComponent } from './utils/book-section/book-section.component';
+import { CharactersComponent } from './characters/characters/characters.component';
+import { CharacterGroupComponent } from './characters/character-group/character-group.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { BookSectionComponent } from './utils/book-section/book-section.componen
     CloneWarsChronologicalComponent,
     TableComponent,
     TableDataClassPipe,
-    BookSectionComponent
+    BookSectionComponent,
+    CharactersComponent,
+    CharacterGroupComponent
   ],
   imports: [
     BrowserModule,

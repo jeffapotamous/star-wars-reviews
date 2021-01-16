@@ -226,3 +226,12 @@ a {
     background-image: linear-gradient(to right, #6d0a79, #f00d0d);
   }
 }
+
+.in-progress-gradient-container {
+  @extend .gradient-container;
+  background-image: linear-gradient(to right, #781111, #0e4b8a);
+
+  &::before {
+    background-image: linear-gradient(to right, #0e4b8a, #781111);
+  }
+}

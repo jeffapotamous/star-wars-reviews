@@ -4,3 +4,8 @@ export enum ReviewClass {
   ALRIGHT,
   BAD
 }
+
+export enum Gender {
+  M = 'M',
+  F = 'F'
+}

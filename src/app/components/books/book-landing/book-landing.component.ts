@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BookCharacterService } from '../../../services/book-character.service';
 
 @Component({
   selector: 'app-book-landing',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookLandingComponent implements OnInit {
 
-  constructor() { }
+  public characterGroups: any[];
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private bookCharacterService: BookCharacterService) {
+    this.characterGroups = [];
   }
 
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+
+    this.route.params.subscribe((params) => {
+      this.characterGroups = this.bookCharacterService.getBookCharactersByBookID(params.code);
+    });
+  }
 }

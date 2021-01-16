@@ -1,7 +1,6 @@
 <div class="ranking-class-container {{rankingClass}}-gradient-container">
   <h3 class="center {{headerClass}}">{{ rankingClass | titlecase }}</h3>
-  <div class="book-container" [class.link]="book.hasCharacterSection" *ngFor="let book of booksList; let index = index"
-    (click)="route(book)">
+  <div class="book-container" *ngFor="let book of booksList; let index = index">
     <div class="rank-index">{{index + 1}}</div>
 
     <div class="purchase-links-container">
@@ -18,17 +17,21 @@
         {{book.name}}
       </h4>
       <img class="book-image" src="assets/images/books/{{book.fileName}}">
-      <div>
+      <div *ngIf="book?.pros.length > 0">
         <h4>Pros</h4>
         <p class="left">
           {{book.pros}}
         </p>
       </div>
-      <div>
+      <div *ngIf="book?.cons.length > 0">
         <h4>Cons</h4>
         <p class="left">
           {{book.cons}}
         </p>
+      </div>
+      <div *ngIf="book.hasCharacterSection" class="link nav-forward-label" (click)="route(book)">
+        See Characters
+        <img class="icon-image" src="assets/images/icons/chevron-right.png">
       </div>
     </div>
   </div>

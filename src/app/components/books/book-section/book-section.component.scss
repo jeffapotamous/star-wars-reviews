@@ -38,3 +38,22 @@
     }
   }
 }
+
+.nav-forward-label {
+  font-style: italic;
+  font-size: 18px;
+  background-color: $purple;
+  border-radius: 3px;
+  padding: 2px 0;
+  margin: 6px 0;
+  transition: 150ms linear all;
+
+  &:hover {
+    background-color: $blue;
+    color: $dark-gray;
+  }
+
+  img {
+    max-height: 11px;
+  }
+}

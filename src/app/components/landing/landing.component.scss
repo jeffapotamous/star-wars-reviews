@@ -1,0 +1,197 @@
+@import "../../../styles.scss";
+
+$lightsaber-blue: #1febfd;
+$lightsaber-green: #6be044;
+$lightsaber-yellow: #ffdf31;
+$lightsaber-red: #ce1616;
+
+.main-page-section {
+  padding: 50px;
+}
+
+/* ----- Landing ----- */
+
+#landing-section {
+  background-image: url("../../../assets/images/mural.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landing-section {
+  height: 122px;
+}
+
+@media only screen and (min-width: 2400px) {
+  #landing-section {
+    height: 197px;
+  }
+}
+
+@media only screen and (min-width: 3100px) {
+  #landing-section {
+    height: 347px;
+  }
+}
+
+#books-section {
+  background-color: $light-gray;
+}
+
+#clone-wars-review-section {
+  background-color: $gray;
+}
+
+#clone-wars-chronological-section {
+  background-color: $dark-gray;
+}
+
+#rots-extended-section {
+  grid-template-columns: 1fr 560px;
+  padding: 20px 30px;
+}
+
+#footer-section {
+  background-color: black;
+  height: 21px;
+  padding: 3px 11px;
+}
+
+#gh-icon {
+  height: 21px;
+}
+
+#time-icon {
+  max-width: 31px;
+  margin-left: 3px;
+}
+
+#navigation-panel {
+  position: fixed;
+  grid-template-rows: repeat(5, 40px);
+  grid-template-columns: 44px 1fr;
+  top: 26px;
+  width: 318px;
+  right: -273px;
+  transition: 0.5s ease-out;
+  font-size: 1.5em;
+  z-index: 1;
+
+  &:hover {
+    right: 0;
+  }
+}
+
+.preview-navbar {
+  right: -223px !important;
+}
+
+.navigation-item {
+  position: relative;
+  text-align: left;
+  padding: 4px 10px;
+  text-shadow: 1px 1px 1px black;
+  transition: 200ms linear background-color;
+
+  &:hover {
+    background-color: #515151ad;
+  }
+}
+
+.lightsaber-blade {
+  position: absolute;
+  height: 3px;
+  width: 90%;
+  transition: 0.3s ease-out;
+}
+
+.lightsaber-hilt {
+  position: absolute;
+  width: 82px;
+  bottom: 0;
+  right: 0;
+}
+
+#kanan {
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-blue 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#anakin {
+  .lightsaber-hilt {
+    bottom: -3px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-blue 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#yoda {
+  .lightsaber-hilt {
+    bottom: -3px;
+    width: 56px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-green 50%) left;
+    background-size: 153%;
+    width: 100%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#rey {
+  .lightsaber-hilt {
+    bottom: -1px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-yellow 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
+#maul {
+  .lightsaber-hilt {
+    bottom: -12px;
+  }
+
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-red 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}

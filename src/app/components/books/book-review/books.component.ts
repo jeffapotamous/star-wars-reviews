@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ReviewClass } from '../../interfaces/enums';
-import { Book } from '../../interfaces/interfaces';
-import { BookService } from '../../services/book.service';
+import { ReviewClass } from '../../../interfaces/enums';
+import { Book } from '../../../interfaces/interfaces';
+import { BookService } from '../../../services/book.service';
 
 @Component({
   selector: 'app-books',

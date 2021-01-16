@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CloneWarsEpisode } from '../interfaces/interfaces';
-import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
+import { CloneWarsEpisode } from '../../interfaces/interfaces';
+import { CloneWarsEpisodesService } from '../../services/clone-wars-episodes.service';
 
 @Component({
   selector: 'app-clone-wars-chronological',

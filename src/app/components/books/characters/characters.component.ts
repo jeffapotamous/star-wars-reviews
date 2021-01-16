@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CharactersInfo } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-characters',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CharactersComponent {
 
-  @Input('charactersInfo') charactersInfo: any;
+  @Input('charactersInfo') charactersInfo: CharactersInfo;
 
 }

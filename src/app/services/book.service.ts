@@ -15,4 +15,20 @@ export class BookService {
   public getListOfBooks(): Book[] {
     return this.listOfBooks;
   }
+
+  public getInProgressBooks(): Book[] {
+    return [
+      {
+        id: 15,
+        name: "Thrawn",
+        appleLink: "",
+        fileName: "light of the jedi.jpg",
+        amazonLink: "https://www.amazon.com/dp/0593157710",
+        googlePlayLink: "https://play.google.com/store/books/details?id=ebvQDwAAQBAJ",
+        pros: "",
+        cons: "",
+        hasCharacterSection: true
+      }
+    ];
+  }
 }

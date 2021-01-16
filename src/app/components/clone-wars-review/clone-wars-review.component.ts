@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CloneWarsEpisode, TableColumn, Tag } from '../interfaces/interfaces';
-import { CloneWarsEpisodesService } from '../services/clone-wars-episodes.service';
-import { CwTagsService } from '../services/cw-tags.service';
-import { TagService } from '../services/tag.service';
-import { UtilsService } from '../services/utils.service';
+import { CloneWarsEpisode, TableColumn, Tag } from '../../interfaces/interfaces';
+import { CloneWarsEpisodesService } from '../../services/clone-wars-episodes.service';
+import { CwTagsService } from '../../services/cw-tags.service';
+import { TagService } from '../../services/tag.service';
+import { UtilsService } from '../../services/utils.service';
 
 @Component({
   selector: 'app-clone-wars-review',

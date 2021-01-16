@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Book } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-book-section',
@@ -11,6 +13,12 @@ export class BookSectionComponent {
   @Input('booksList') booksList: any;
   @Input('headerClass') headerClass: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  public route(book: Book) {
+    if (book.hasCharacterSection) {
+      this.router.navigate(['/book', book.id]);
+    }
+  }
 
 }

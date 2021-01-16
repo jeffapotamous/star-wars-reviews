@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ReviewClass } from '../interfaces/enums';
-import { Book } from '../interfaces/interfaces';
-import { BookService } from '../services/book.service';
+import { ReviewClass } from '../../../interfaces/enums';
+import { Book } from '../../../interfaces/interfaces';
+import { BookService } from '../../../services/book.service';
 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.scss']
 })
-export class BooksComponent implements OnInit {
+export class BookReviewComponent implements OnInit {
 
   public bestCanonBooks: Book[];
   public goodCanonBooks: Book[];
   public alrightCanonBooks: Book[];
   public badCanonBooks: Book[];
+  public inProgress: Book[];
 
   constructor(private bookService: BookService) {
     this.bestCanonBooks = [];
@@ -57,5 +58,7 @@ export class BooksComponent implements OnInit {
           break;
       }
     });
+
+    this.inProgress = this.bookService.getInProgressBooks();
   }
 }

@@ -17,6 +17,7 @@ export interface Book {
 	amazonLink: string;
 	googlePlayLink?: string;
 	appleLink?: string;
+	hasCharacterSection?: boolean;
 }
 
 export interface TableColumn {

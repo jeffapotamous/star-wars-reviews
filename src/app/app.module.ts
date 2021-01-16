@@ -14,7 +14,6 @@ import { TableModule } from 'primeng/table';
 import { TableDataClassPipe } from './pipes/table-data-class.pipe';
 import { BookSectionComponent } from './components/books/book-section/book-section.component';
 import { CharactersComponent } from './components/books/characters/characters.component';
-import { CharacterGroupComponent } from './components/books/character-group/character-group.component';
 import { BookLandingComponent } from './components/books/book-landing/book-landing.component';
 import { LandingComponent } from './components/landing/landing.component';
 
@@ -33,7 +32,6 @@ const routes: Routes = [
     TableDataClassPipe,
     BookSectionComponent,
     CharactersComponent,
-    CharacterGroupComponent,
     BookLandingComponent,
     LandingComponent
   ],

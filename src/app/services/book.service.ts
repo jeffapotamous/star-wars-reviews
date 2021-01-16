@@ -19,7 +19,7 @@ export class BookService {
   public getInProgressBooks(): Book[] {
     return [
       {
-        id: 0,
+        id: 15,
         name: "Thrawn",
         appleLink: "",
         fileName: "light of the jedi.jpg",
@@ -27,6 +27,7 @@ export class BookService {
         googlePlayLink: "https://play.google.com/store/books/details?id=ebvQDwAAQBAJ",
         pros: "",
         cons: "",
+        hasCharacterSection: true
       }
     ];
   }

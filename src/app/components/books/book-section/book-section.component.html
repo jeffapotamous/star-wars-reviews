@@ -1,6 +1,6 @@
 <div class="ranking-class-container {{rankingClass}}-gradient-container">
   <h3 class="center {{headerClass}}">{{ rankingClass | titlecase }}</h3>
-  <div class="book-container" *ngFor="let book of booksList; let index = index" (click)="route(book)">
+  <div class="book-container" [class.link]="book.hasCharacterSection" *ngFor="let book of booksList; let index = index" (click)="route(book)">
     <div class="rank-index">{{index + 1}}</div>
 
     <div class="purchase-links-container">

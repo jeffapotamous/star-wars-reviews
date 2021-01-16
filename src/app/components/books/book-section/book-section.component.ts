@@ -16,7 +16,9 @@ export class BookSectionComponent {
   constructor(private router: Router) { }
 
   public route(book: Book) {
-    this.router.navigate(['/book', book.id]);
+    if (book.hasCharacterSection) {
+      this.router.navigate(['/book', book.id]);
+    }
   }
 
 }

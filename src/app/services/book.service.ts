@@ -20,7 +20,7 @@ export class BookService {
     return [
       {
         id: 15,
-        name: "Thrawn",
+        name: "Light of the Jedi",
         appleLink: "",
         fileName: "light of the jedi.jpg",
         amazonLink: "https://www.amazon.com/dp/0593157710",

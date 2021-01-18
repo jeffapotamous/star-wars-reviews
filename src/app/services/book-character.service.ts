@@ -15,11 +15,11 @@ export class BookCharacterService {
           label: 'Jedi',
           characters: [
             { name: 'Master Avar Kriss', gender: Gender.F, photo: 'AvarKriss.png' },
-            { name: 'Elzar Mann', gender: Gender.M, photo: 'ElzarMann_LOTJ.png' },
+            { name: 'Elzar Mann', gender: Gender.M, photo: 'ElzarMann_LOTJ.png', description: 'Looked like someone out of a holo-drama. Olive skin and dark, wavy hair.' },
             { name: "Te'Ami", gender: Gender.F, species: 'Durros', description: 'Green skin, large red eyes, high domed skull', photo: 'TeAmi.png' },
             { name: 'Mikkel Sutmani', gender: Gender.M, species: 'Ithorian', photo: 'MikkelSutmani.png' },
             { name: 'Nib Assek', gender: Gender.F, photo: 'NibAssek.png' },
-            { name: 'Burryaga Agaburry', gender: Gender.M, species: 'Wookie', description: 'Nib\'s Padawan', photo: 'Burryaga.png' },
+            { name: 'Burryaga Agaburry', gender: Gender.M, label1: 'AKA: Burry', species: 'Wookie', description: 'Nib\'s Padawan', photo: 'Burryaga.png' },
             { name: 'Master Loden Greatstorm', gender: Gender.M, species: "Twi'lek", photo: 'LodenGreatstorm.png' },
             { name: 'Bell Zettifar', gender: Gender.M, species: 'Human', description: 'Loden\'s Padawan', photo: 'Bell-Zettifar-CA.png' },
             { name: 'Indeera Stokes', gender: Gender.F, species: 'Tholothian', photo: 'IndeeraStokes.jpg', description: 'Dark skin, elegant white tendrils, blue eyes.' },
@@ -61,6 +61,7 @@ export class BookCharacterService {
             { name: 'Counselor Daan of Hetzal', gender: Gender.M },
             { name: 'Norel Quo', gender: Gender.M, species: 'Koorivar', description: 'Unpigmented. Aid to Chancelor Lina Soh' },
             { name: 'Senator Izzet Noor of Serenno', gender: Gender.M, description: 'Thin, tall, aged, but vigorous, bald but for a lush fringe of white hair that he wore long.' },
+            {name: 'Jeni Wataro', gender: Gender.F, species: 'Chagrain', description: 'Blue skin and thick, horn-tipped tentacles curling out from the sides of her head. Long time aid to Senator Noor.'},
             { name: 'Jeffo Lorillia', gender: Gender.M, species: 'Munn' }
           ]
         },
@@ -95,7 +96,7 @@ export class BookCharacterService {
             { name: 'Sella', gender: Gender.F, species: 'Twi\'lek' },
             { name: 'Scantech (Second Class) Vel Carann', gender: Gender.F },
             { name: 'Shai Tennem', species: 'Bith', gender: Gender.M },
-            { name: 'Keven Tarr', gender: Gender.M, species: 'Human' },
+            { name: 'Keven Tarr', gender: Gender.M, species: 'Human', description: 'Genius slicer. Head of the Ministry of Technology in Hetzal Prime' },
             { name: 'Larence Garello', gender: Gender.M, description: 'Chief executive of Garello Tech' },
             { name: 'Marlowe San Tekka', gender: Gender.M, species: 'Human', description: 'Scieon of the San Tekka empire, married to Vellis. Pale, blonde hair, blue eyes. Softer looking face.' },
             { name: 'Vellis San Tekka', gender: Gender.M, species: 'Human', description: 'Member of the San Tekka empire, married to Marlowe. Pale, blonde hair, blue eyes. Face looked chopped from granite.' },

@@ -20,10 +20,25 @@ $theme-4: #0094c6;
 $theme-5: #816e94;
 
 /* ----- Globals ----- */
+@font-face {
+  font-family: mavenlight300;
+  src: url('./assets/fonts/MavenProLight-300.otf') format("opentype");
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url('./assets/fonts/Quicksand-Regular.ttf') format("opentype");
+}
+
 body {
   margin: 0;
   background-color: $darkest-gray;
   color: $light-white;
+  font-family: 'quicksand';
+}
+
+h1 {
+  font-family: 'mavenlight300';
 }
 
 a {

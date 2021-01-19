@@ -19,17 +19,6 @@ export class BookService {
   public getInProgressBooks(): Book[] {
     return [
       {
-        id: 15,
-        name: "Light of the Jedi",
-        appleLink: "",
-        fileName: "light of the jedi.jpg",
-        amazonLink: "https://www.amazon.com/dp/0593157710",
-        googlePlayLink: "https://play.google.com/store/books/details?id=ebvQDwAAQBAJ",
-        pros: "",
-        cons: "",
-        hasCharacterSection: true
-      },
-      {
         id: 16,
         name: "Thrawn Ascendancy: Chaos Rising",
         appleLink: "",

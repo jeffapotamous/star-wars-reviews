@@ -22,23 +22,23 @@ $theme-5: #816e94;
 /* ----- Globals ----- */
 @font-face {
   font-family: mavenlight300;
-  src: url('./assets/fonts/MavenProLight-300.otf') format("opentype");
+  src: url("./assets/fonts/MavenProLight-300.otf") format("opentype");
 }
 
 @font-face {
   font-family: quicksand;
-  src: url('./assets/fonts/Quicksand-Regular.ttf') format("opentype");
+  src: url("./assets/fonts/Quicksand-Regular.ttf") format("opentype");
 }
 
 body {
   margin: 0;
   background-color: $darkest-gray;
   color: $light-white;
-  font-family: 'quicksand';
+  font-family: "quicksand";
 }
 
 h1 {
-  font-family: 'mavenlight300';
+  font-family: "mavenlight300";
 }
 
 a {
@@ -110,6 +110,12 @@ a {
   max-height: 35px;
   max-width: 35px;
   object-fit: cover;
+}
+
+/* ----- TV ----- */
+.tv-seasons-key {
+  width: 103px;
+  text-align: center;
 }
 
 /* ----- CW Episodes ----- */
@@ -191,6 +197,11 @@ a {
 
 .bad-container {
   background-color: $red;
+}
+
+.uncategorized-container {
+  background-color: #ffffff;
+  color: #a3a3a3;
 }
 
 .gradient-container {

@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+
+#rebels-review-container {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 33px;
+}
+
+#rebels-text-container {
+  grid-template-columns: 1fr 103px;
+  padding: 5px 15px;
+}
+
+#rebels-description {
+  padding: 5px 15px;
+}
+
+#rebels-description-logo {
+  width: 70%;
+  max-width: 1000px;
+}

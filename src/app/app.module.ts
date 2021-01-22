@@ -16,6 +16,7 @@ import { BookSectionComponent } from './components/books/book-section/book-secti
 import { CharactersComponent } from './components/books/characters/characters.component';
 import { BookLandingComponent } from './components/books/book-landing/book-landing.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { RebelsReviewComponent } from './components/rebels-review/rebels-review.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -33,7 +34,8 @@ const routes: Routes = [
     BookSectionComponent,
     CharactersComponent,
     BookLandingComponent,
-    LandingComponent
+    LandingComponent,
+    RebelsReviewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,17 @@
 import { Gender } from "./enums";
 
-export interface CloneWarsEpisode {
+export interface CloneWarsEpisode extends TvEpisode {
+	chronologicalOrder: number;
+}
+
+export interface TvEpisode {
 	id: number;
 	name: string;
 	season?: number;
 	episode?: number;
 	link: string;
-	chronologicalOrder: number;
 	releaseOrder: number;
+	releaseDate?: Date;
 }
 
 export interface Book {

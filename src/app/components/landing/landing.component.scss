@@ -4,6 +4,7 @@ $lightsaber-blue: #1febfd;
 $lightsaber-green: #6be044;
 $lightsaber-yellow: #ffdf31;
 $lightsaber-red: #ce1616;
+$lightsaber-purple: #bc3aff;
 
 .main-page-section {
   padding: 50px;
@@ -45,6 +46,10 @@ $lightsaber-red: #ce1616;
 
 #clone-wars-chronological-section {
   background-color: $dark-gray;
+}
+
+#rebels-review-section {
+  background-color: #333333;
 }
 
 #rots-extended-section {
@@ -113,7 +118,26 @@ $lightsaber-red: #ce1616;
   right: 0;
 }
 
+#mace {
+  .lightsaber-hilt {
+    bottom: -3px;
+  }
+  .lightsaber-blade {
+    background: linear-gradient(to right, #00000000 50%, $lightsaber-purple 50%) left;
+    background-size: 200%;
+  }
+
+  &:hover {
+    .lightsaber-blade {
+      background-position: right;
+    }
+  }
+}
+
 #kanan {
+  .lightsaber-hilt {
+    bottom: -3px;
+  }
   .lightsaber-blade {
     background: linear-gradient(to right, #00000000 50%, $lightsaber-blue 50%) left;
     background-size: 200%;
@@ -128,7 +152,7 @@ $lightsaber-red: #ce1616;
 
 #anakin {
   .lightsaber-hilt {
-    bottom: -3px;
+    bottom: -6px;
   }
 
   .lightsaber-blade {
@@ -145,7 +169,7 @@ $lightsaber-red: #ce1616;
 
 #yoda {
   .lightsaber-hilt {
-    bottom: -3px;
+    bottom: -6px;
     width: 56px;
   }
 
@@ -164,7 +188,7 @@ $lightsaber-red: #ce1616;
 
 #rey {
   .lightsaber-hilt {
-    bottom: -1px;
+    bottom: -3px;
   }
 
   .lightsaber-blade {
@@ -181,7 +205,7 @@ $lightsaber-red: #ce1616;
 
 #maul {
   .lightsaber-hilt {
-    bottom: -12px;
+    bottom: -19px;
   }
 
   .lightsaber-blade {

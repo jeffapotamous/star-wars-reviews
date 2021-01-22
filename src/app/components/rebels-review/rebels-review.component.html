@@ -1,0 +1,32 @@
+<div class="grid" id="rebels-review-container">
+  <div class="grid" id="rebels-text-container">
+    <div class="inline-block" id="rebels-description">
+      <h1>Rebels</h1>
+      <p>Below is a table with every episode of Star Wars Rebels. It is sorted by my own personal ranking</p>
+      <p>Each season is color-coded according to the key to the right, going from red to green.</p>
+      <p>The ranking sorts each individual episode based off my own personal opinion. I compared every single episode
+        against each other and ended up with this list.</p>
+      <p>Feel free to sort the table out by Season, Name, Rank, or Release Order!
+      <p>There is also a link to watch any of these Rebels episodes if you have a Disney+ account! Click on the icon at
+        the right to open it up there!</p>
+      <p>Note: The episode "Jedi Night" will remain unranked on my list. If you have seen this episode, then you
+        probably know why. Jedi Night holds a very special place in Star Wars Canon, and I do not think I can place it
+        anywhere on this list and do it justice.</p>
+    </div>
+
+    <div class="inline-block tv-seasons-key">
+      <h4>Seasons</h4>
+      <p class="season-key-label season-1">Season 1</p>
+      <p class="season-key-label season-2">Season 2</p>
+      <p class="season-key-label season-3">Season 3</p>
+      <p class="season-key-label season-4">Season 4</p>
+    </div>
+  </div>
+
+  <div class="center">
+    <img class="center" id="rebels-description-logo" src="assets/images/Rebels.png">
+  </div>
+</div>
+
+<app-table [columns]="tableColumns" [tableData]="tableData">
+</app-table>

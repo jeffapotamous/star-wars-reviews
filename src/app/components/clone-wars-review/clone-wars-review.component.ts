@@ -3,7 +3,6 @@ import { CloneWarsEpisode, TableColumn, Tag } from '../../interfaces/interfaces'
 import { CloneWarsEpisodesService } from '../../services/clone-wars-episodes.service';
 import { CwTagsService } from '../../services/cw-tags.service';
 import { TagService } from '../../services/tag.service';
-import { UtilsService } from '../../services/utils.service';
 
 @Component({
   selector: 'app-clone-wars-review',
@@ -20,12 +19,12 @@ export class CloneWarsReviewComponent implements OnInit {
   public tableData: any[];
   private tableDataCopy: any[];
 
-  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private tagService: TagService, private cwTagsService: CwTagsService, private utilsService: UtilsService) {
+  constructor(private cloneWarsEpisodesService: CloneWarsEpisodesService, private tagService: TagService, private cwTagsService: CwTagsService) {
     this.tableColumns = [
       { header: 'Season', field: 'season', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'season' },
       { header: 'Episode', field: 'episode', sort: false, style: { width: '100px', align: 'right' } },
       { header: 'Name', field: 'name', sort: true },
-      { header: 'Rank', field: 'rankOrder', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'rank' },
+      { header: 'Rank', field: 'rankOrder', sort: true, style: { width: '100px', align: 'right' }, classCompare: 'cw-rank' },
       { header: 'Release Order', field: 'releaseOrder', sort: true, style: { width: '150px', align: 'right' } },
       { header: 'Chronological Order', field: 'chronologicalOrder', sort: true, style: { width: '200px', align: 'right' } },
       { header: 'Disney+', field: 'disneyPlus', sort: false, style: { width: '100px', align: 'center' }, type: 'linkIcon' },

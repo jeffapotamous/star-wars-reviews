@@ -38,6 +38,16 @@ export class BookService {
         googlePlayLink: "https://play.google.com/store/books/details?id=58WyDwAAQBAJ",
         pros: "",
         cons: ""
+      },
+      {
+        id: 18,
+        name: "Into The Dark",
+        appleLink: "",
+        fileName: "into the dark.jpg",
+        amazonLink: "https://amazon.com/dp/1368057284",
+        googlePlayLink: "https://play.google.com/store/books/details?id=ManSDwAAQBAJ",
+        pros: "",
+        cons: ""
       }
     ];
   }

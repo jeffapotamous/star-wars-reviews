@@ -10,7 +10,8 @@
         </h4>
         <div *ngIf="character.label1" class="italics">{{character.label1}}</div>
         <div *ngIf="character.label2" class="italics">{{character.label2}}</div>
-        <div *ngIf="character.species">Species: {{character.species}}</div>
+        <div *ngIf="character.label3" class="italics smaller-font">{{character.label3}}</div>
+        <div *ngIf="character.species" class="small-font">Species: {{character.species}}</div>
         <img *ngIf="character.photo" class="image" src="assets/images/characters/{{character.photo}}">
 
         <div>

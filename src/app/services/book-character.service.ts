@@ -61,7 +61,7 @@ export class BookCharacterService {
             { name: 'Counselor Daan of Hetzal', gender: Gender.M },
             { name: 'Norel Quo', gender: Gender.M, species: 'Koorivar', description: 'Unpigmented. Aid to Chancelor Lina Soh' },
             { name: 'Senator Izzet Noor of Serenno', gender: Gender.M, description: 'Thin, tall, aged, but vigorous, bald but for a lush fringe of white hair that he wore long.' },
-            {name: 'Jeni Wataro', gender: Gender.F, species: 'Chagrain', description: 'Blue skin and thick, horn-tipped tentacles curling out from the sides of her head. Long time aid to Senator Noor.'},
+            { name: 'Jeni Wataro', gender: Gender.F, species: 'Chagrain', description: 'Blue skin and thick, horn-tipped tentacles curling out from the sides of her head. Long time aid to Senator Noor.' },
             { name: 'Jeffo Lorillia', gender: Gender.M, species: 'Munn' }
           ]
         },
@@ -110,10 +110,33 @@ export class BookCharacterService {
 
       16: [
         {
-          label: 'Chiss',
+          label: 'Military',
           characters: [
-            { name: 'Mitth\'raw\'nuruodo', gender: Gender.M, species: 'Chiss', label1: 'Core Name: Thrawn', label2: 'Birth Name: Kivu\'raw\'nuru (Vurawn)', photo: 'thrawn.png' },
-            { name: 'Ar\'alani', gender: Gender.F, species: 'Chiss', label1: 'Core Name: Ziara', label2: 'Birth Name: Irizi\'ar\'alani', photo: 'aralani.png' }
+            { name: 'Mitth\'raw\'nuruodo', gender: Gender.M, species: 'Chiss', label1: 'Core Name: Thrawn', label2: 'Birth Name: Kivu\'raw\'nuru (Vurawn)', label3: 'Family: Mitth Merit Adoptive', photo: 'thrawn.png' },
+            { name: 'Ar\'alani', gender: Gender.F, species: 'Chiss', label1: 'Core Name: Ziara', label2: 'Birth Name: Irizi\'ar\'alani', label3: 'Birth Family: Irizi Blood', photo: 'aralani.png' },
+            { name: "Ufsa'mak'ro", gender: Gender.M, species: 'Chilss', label1: 'Core Name: Samakro', label3: 'Family: Ufsa Merit Adoptive' },
+            { name: "Ba'kif", gender: Gender.M, label1: 'Core Name: Labaki', description: 'Supreme General of the Chiss Defense Force. Former member of the Defense Hierarchy Council.' }
+          ]
+        },
+
+        {
+          label: 'Syndic',
+          characters: [
+            { name: "Mitth'urf'ianico", gender: Gender.M, species: 'Chiss', label1: 'Core Name: Thurfian', label3: 'Family: Mitth Blood' }
+          ]
+        },
+
+        {
+          label: 'Aristocra',
+          characters: [
+          ]
+        },
+
+        {
+          label: 'Sky-Walkers',
+          characters: [
+            { name: "Mitth'ali'astov", gender: Gender.F, species: 'Chiss', label: "Core Name: Thalias", label2: "Birth Name: Al'iastov", label3: 'Family: Mitth Merit Adoptive' },
+            { name: "Che'ri", gender: Gender.F, species: "Chiss" }
           ]
         }
       ]

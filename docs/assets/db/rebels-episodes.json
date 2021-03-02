@@ -1,7 +1,7 @@
 [
   { "id": -1, "season": 4, "episode": 10, "releaseOrder": 69, "name": "Jedi Night", "releaseDate": "February 19, 2018", "link": "https://www.disneyplus.com/video/3967f9bc-db27-47f7-aad9-73948974ee45" },
-  { "id": 0, "season": 2, "episode": 22, "releaseOrder": 36, "name": "Twilight of the Apprentice Part 2", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/bdb2a1e3-cd18-402d-8f68-750e21ef76b5" },
-  { "id": 1, "season": 2, "episode": 21, "releaseOrder": 37, "name": "Twilight of the Apprentice Part 1", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/7a2ad837-c828-4afe-9f5a-a5174171608b" },
+  { "id": 0, "season": 2, "episode": 22, "releaseOrder": 37, "name": "Twilight of the Apprentice Part 2", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/bdb2a1e3-cd18-402d-8f68-750e21ef76b5" },
+  { "id": 1, "season": 2, "episode": 21, "releaseOrder": 36, "name": "Twilight of the Apprentice Part 1", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/7a2ad837-c828-4afe-9f5a-a5174171608b" },
   { "id": 2, "season": 3, "episode": 15, "releaseOrder": 52, "name": "Trials of the Darksaber", "releaseDate": "January 21, 2017", "link": "https://www.disneyplus.com/video/60cfc110-c00e-43ca-84b4-61a1f1ad98b6" },
   { "id": 3, "season": 3, "episode": 20, "releaseOrder": 57, "name": "Twin Suns", "releaseDate": "March 18, 2017", "link": "https://www.disneyplus.com/video/21b161d3-d6a7-4bf1-bf40-3ee7c539d7b0" },
   { "id": 4, "season": 4, "episode": 13, "releaseOrder": 72, "name": "A World Between Worlds", "releaseDate": "February 26, 2018", "link": "https://www.disneyplus.com/video/a9e998e9-fecb-4ac4-8e61-140fd738e33c" },

@@ -1,7 +1,7 @@
 [
   { "id": -1, "season": 4, "episode": 10, "releaseOrder": 69, "name": "Jedi Night", "releaseDate": "February 19, 2018", "link": "https://www.disneyplus.com/video/3967f9bc-db27-47f7-aad9-73948974ee45" },
-  { "id": 0, "season": 2, "episode": 22, "releaseOrder": 36, "name": "Twilight of the Apprentice Part 1", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/bdb2a1e3-cd18-402d-8f68-750e21ef76b5" },
-  { "id": 1, "season": 2, "episode": 21, "releaseOrder": 37, "name": "Twilight of the Apprentice Part 1", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/7a2ad837-c828-4afe-9f5a-a5174171608b" },
+  { "id": 0, "season": 2, "episode": 22, "releaseOrder": 37, "name": "Twilight of the Apprentice Part 2", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/bdb2a1e3-cd18-402d-8f68-750e21ef76b5" },
+  { "id": 1, "season": 2, "episode": 21, "releaseOrder": 36, "name": "Twilight of the Apprentice Part 1", "releaseDate": "March 30, 2016", "link": "https://www.disneyplus.com/video/7a2ad837-c828-4afe-9f5a-a5174171608b" },
   { "id": 2, "season": 3, "episode": 15, "releaseOrder": 52, "name": "Trials of the Darksaber", "releaseDate": "January 21, 2017", "link": "https://www.disneyplus.com/video/60cfc110-c00e-43ca-84b4-61a1f1ad98b6" },
   { "id": 3, "season": 3, "episode": 20, "releaseOrder": 57, "name": "Twin Suns", "releaseDate": "March 18, 2017", "link": "https://www.disneyplus.com/video/21b161d3-d6a7-4bf1-bf40-3ee7c539d7b0" },
   { "id": 4, "season": 4, "episode": 13, "releaseOrder": 72, "name": "A World Between Worlds", "releaseDate": "February 26, 2018", "link": "https://www.disneyplus.com/video/a9e998e9-fecb-4ac4-8e61-140fd738e33c" },
@@ -13,7 +13,7 @@
   { "id": 10, "season": 3, "episode": 22, "releaseOrder": 59, "name": "Zero Hour Part 2", "releaseDate": "March 25, 2017", "link": "https://www.disneyplus.com/video/d55d761e-f35e-4d4f-902d-d1e2567d7ecf" },
   { "id": 11, "season": 4, "episode": 8, "releaseOrder": 67, "name": "Crawler Commanders", "releaseDate": "November 6, 2017", "link": "https://www.disneyplus.com/video/ea38629c-8a0c-4d66-8ec4-c837cfd41930" },
   { "id": 12, "season": 3, "episode": 1, "releaseOrder": 38, "name": "Steps into Shadow Part 1", "releaseDate": "September 24, 2016", "link": "https://www.disneyplus.com/video/7354376c-7103-4e50-bf16-d4e0751d2cff" },
-  { "id": 13, "season": 3, "episode": 2, "releaseOrder": 39, "name": "Steps into Shadow Part 1", "releaseDate": "September 24, 2016", "link": "https://www.disneyplus.com/video/21b159e1-8f6a-4aa3-adc5-7782aa07ca1e" },
+  { "id": 13, "season": 3, "episode": 2, "releaseOrder": 39, "name": "Steps into Shadow Part 2", "releaseDate": "September 24, 2016", "link": "https://www.disneyplus.com/video/21b159e1-8f6a-4aa3-adc5-7782aa07ca1e" },
   { "id": 14, "season": 4, "episode": 14, "releaseOrder": 73, "name": "A Fool's Hope", "releaseDate": "March 5, 2018", "link": "https://www.disneyplus.com/video/2dbf7679-9d23-410e-92e2-05818b37723e" },
   { "id": 15, "season": 1, "episode": 15, "releaseOrder": 15, "name": "Fire Across the Galaxy", "releaseDate": "March 2, 2015", "link": "https://www.disneyplus.com/video/9c5380f4-edbd-4f58-a2b1-15c8360f3c61" },
   { "id": 16, "season": 3, "episode": 21, "releaseOrder": 58, "name": "Zero Hour Part 1", "releaseDate": "March 25, 2017", "link": "https://www.disneyplus.com/video/874df832-f73a-4c0b-95ac-506dce1149c1" },

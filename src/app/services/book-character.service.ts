@@ -139,6 +139,16 @@ export class BookCharacterService {
             { name: "Che'ri", gender: Gender.F, species: "Chiss" }
           ]
         }
+      ],
+
+      18: [
+        {
+          label: 'Jedi',
+          characters: [
+            { name: 'Jora Malli', gender: Gender.F, species: 'Togruta' },
+            { name: 'Reath Silas', gender: Gender.M, species: 'Human', description: "Jora's padawan" }
+          ]
+        }
       ]
     }
   }

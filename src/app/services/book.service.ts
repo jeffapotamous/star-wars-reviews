@@ -47,7 +47,8 @@ export class BookService {
         amazonLink: "https://amazon.com/dp/1368057284",
         googlePlayLink: "https://play.google.com/store/books/details?id=ManSDwAAQBAJ",
         pros: "",
-        cons: ""
+        cons: "",
+        hasCharacterSection: true
       }
     ];
   }

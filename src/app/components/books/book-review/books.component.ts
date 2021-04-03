@@ -15,6 +15,7 @@ export class BookReviewComponent implements OnInit {
   public alrightCanonBooks: Book[];
   public badCanonBooks: Book[];
   public inProgress: Book[];
+  public inQueue: Book[];
 
   constructor(private bookService: BookService) {
     this.bestCanonBooks = [];
@@ -60,5 +61,6 @@ export class BookReviewComponent implements OnInit {
     });
 
     this.inProgress = this.bookService.getInProgressBooks();
+    this.inQueue = this.bookService.getInQueueBooks();
   }
 }

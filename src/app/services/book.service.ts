@@ -19,17 +19,6 @@ export class BookService {
   public getInProgressBooks(): Book[] {
     return [
       {
-        id: 16,
-        name: "Thrawn Ascendancy: Chaos Rising",
-        appleLink: "",
-        fileName: "Chaos Rising.jpg",
-        amazonLink: "https://www.amazon.com/dp/0593157680",
-        googlePlayLink: "https://play.google.com/store/books/details?id=OsmyDwAAQBAJ",
-        pros: "",
-        cons: "",
-        hasCharacterSection: true
-      },
-      {
         id: 17,
         name: "Alphabet Squadron: Shadow Fall",
         appleLink: "",
@@ -38,14 +27,18 @@ export class BookService {
         googlePlayLink: "https://play.google.com/store/books/details?id=58WyDwAAQBAJ",
         pros: "",
         cons: ""
-      },
+      }
+    ];
+  }
+
+  public getInQueueBooks(): Book[] {
+    return [
       {
-        id: 18,
-        name: "Into The Dark",
-        appleLink: "",
-        fileName: "into the dark.jpg",
-        amazonLink: "https://amazon.com/dp/1368057284",
-        googlePlayLink: "https://play.google.com/store/books/details?id=ManSDwAAQBAJ",
+        id: 19,
+        name: "Queen's Hope",
+        fileName: "",
+        amazonLink: "",
+        googlePlayLink: "",
         pros: "",
         cons: ""
       }

@@ -27,6 +27,16 @@ export class BookService {
         googlePlayLink: "https://play.google.com/store/books/details?id=58WyDwAAQBAJ",
         pros: "",
         cons: ""
+      },
+      {
+        id: 20,
+        name: "Phasma",
+        appleLink: "",
+        fileName: "phasma.jpg",
+        amazonLink: "https://smile.amazon.com/dp/1524796336",
+        googlePlayLink: "https://play.google.com/store/books/details?id=48WtDgAAQBAJ",
+        pros: "",
+        cons: ""
       }
     ];
   }

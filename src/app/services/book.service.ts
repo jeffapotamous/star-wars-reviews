@@ -19,6 +19,26 @@ export class BookService {
   public getInProgressBooks(): Book[] {
     return [
       {
+        id: 20,
+        name: "Thrawn Ascendancy: Greater Good",
+        appleLink: "",
+        fileName: "greater good.jpg",
+        amazonLink: "https://smile.amazon.com/dp/1529101921",
+        googlePlayLink: "https://play.google.com/store/books/details?id=OdMAEAAAQBAJ",
+        pros: "",
+        cons: ""
+      },
+      {
+        id: 20,
+        name: "The Rising Storm",
+        appleLink: "",
+        fileName: "The Rising Storm.jpg",
+        amazonLink: "https://smile.amazon.com/dp/0593159411",
+        googlePlayLink: "https://play.google.com/store/books/details?id=hmQBEAAAQBAJ",
+        pros: "",
+        cons: ""
+      },
+      {
         id: 17,
         name: "Alphabet Squadron: Shadow Fall",
         appleLink: "",
